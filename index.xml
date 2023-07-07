@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on The Log Blog</title>
+    <title>Home on Log Blog</title>
     <link>https://alanoakes.github.io/</link>
-    <description>Recent content in Home on The Log Blog</description>
+    <description>Recent content in Home on Log Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://alanoakes.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://alanoakes.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://alanoakes.github.io/about/</guid>
+      <description>This is under 🏗️ construction at the moment.</description>
+    </item>
+    
   </channel>
 </rss>
