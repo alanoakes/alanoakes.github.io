@@ -6,11 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.92.2" />
-  <link rel="canonical" href="https://alanoakes.github.io/tags/" />
+  <link rel="canonical" href="https://alanoakes.github.io/bible-miner-sankey-chart/" />
 
   
     
-    <meta name="description" content="Tags">
+    <meta name="description" content="Overview I am currently taking a break from the high computing power of R libraries and learning how these these tools can practically work in other applications.
+One such chart is the Sankey Chart. I decided to make one using Visual Basic for my bible word study.
+Sankey charts really help do bible word studies (i.e. text mining) since it helps see what counting word usage (translations) alone cannot.
+Example Word Study For example, each biblical use of the word “jealous” is important in its own way.">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://alanoakes.github.io/apple-touch-icon.png">
@@ -60,7 +63,7 @@
 
   
   
-  <title>Tags | Log Blog</title>
+  <title>Word Study Sankey Chart | Log Blog</title>
 </head>
 
   <body>
@@ -212,7 +215,7 @@
       
       
       
-      <a href="/post/" >
+      <a href="/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use href="#bookmark"></use>
         </svg>
@@ -225,7 +228,7 @@
       
       
       
-      <a href="/tags/" aria-current="page">
+      <a href="/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use href="#bookmark"></use>
         </svg>
@@ -269,66 +272,178 @@
         <div>
           
   <main id="main">
-    <h1>Tags</h1>
-    <ul class="patterns-list">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use href="#bookmark"></use>
+      </svg>
+      Word Study Sankey Chart
+    </h1>
+
+    <div class="date">
       
-        <li>
-          <h2>
-            <a href="/tags/bible/">
+      
+      <strong>Publish date: </strong>Jul 07, 2023
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use href="#tag"></use>
               </svg>
-              (1) Bible
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/bibleminer/">
+              
+              <a href="/tags/bible/">Bible</a>
+            </li>
+          
+            <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use href="#tag"></use>
               </svg>
-              (1) BibleMiner
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/sankeychart/">
+              
+              <a href="/tags/bibleminer/">BibleMiner</a>
+            </li>
+          
+            <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use href="#tag"></use>
               </svg>
-              (1) SankeyChart
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/textmining/">
+              
+              <a href="/tags/sankeychart/">SankeyChart</a>
+            </li>
+          
+            <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use href="#tag"></use>
               </svg>
-              (1) TextMining
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/visualbasic/">
+              
+              <a href="/tags/textmining/">TextMining</a>
+            </li>
+          
+            <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use href="#tag"></use>
               </svg>
-              (1) VisualBasic
-            </a>
-          </h2>
-        </li>
-      
-    </ul>
+              
+              <a href="/tags/visualbasic/">VisualBasic</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+
+
+    <h2 id="overview">Overview</h2>
+<p>I am currently taking a break from the high computing power of R libraries and
+learning how these these tools can practically work in other applications.</p>
+<p>One such chart is the Sankey Chart. I decided to make one using Visual Basic
+for my bible word study.</p>
+<p>Sankey charts really help do bible word studies (i.e. text mining) since it
+helps see what counting word usage (translations) alone cannot.</p>
+<h3 id="example-word-study">Example Word Study</h3>
+<p>For example, each biblical use of the word &ldquo;jealous&rdquo; is important in its own
+way. Its is used in the Hebrew as a verb, adjective and a noun. In the Greek
+its both a noun and a verb.</p>
+<p>Some translations are confined with just a few words and some with many, all
+with their own context. &ldquo;Jealousy&rdquo; is shown in the Bible so differently as
+a powerful aspect of God and yet as also &ldquo;rottenness of the bones (Pro
+14:30)&rdquo;.</p>
+<h3 id="word-study-correlations">Word Study Correlations</h3>
+<p><img src="images/1629870387101.jpg" alt="pic1"></p>
+<h3 id="vba-sankey-chart">VBA Sankey Chart</h3>
+<p>Here is the code to try it yourself:</p>
+<pre tabindex="0"><code class="language-vbscript" data-lang="vbscript">Sub sankeyCluster()
+  Dim i As Long, clstClr As Long, clust As String
+  Dim src As Range, tgt As Range, wgt As Long, maxWgt As Long
+  Dim bgnX As Single, bgnY As Single, endX As Single, endY As Single
+
+  maxWgt = Application.WorksheetFunction.Max(Sheet4.Range(&quot;$C:$C&quot;))
+  Rows(&quot;4:17&quot;).RowHeight = 40
+
+  For i = 2 To 23
+    wgt = Sheet4.Range(&quot;C&quot; &amp; i).Value
+    Set src = Sheet12.Range(Sheet4.Range(&quot;E&quot; &amp; i).Value)
+    Set tgt = Sheet12.Range(Sheet4.Range(&quot;F&quot; &amp; i).Value)
+
+    bgnX = src.Left
+    bgnY = src.Top + (src.Height / 2)
+    endX = tgt.Left
+    endY = tgt.Top + (tgt.Height / 2)
+
+    clust = Sheet4.Range(&quot;G&quot; &amp; i).Value
+    Select Case clust
+      Case &quot;black&quot;:  clstClr = VBA.RGB(0, 0, 0)
+      Case &quot;red&quot;:    clstClr = VBA.RGB(255, 0, 0)
+      Case &quot;blue&quot;:   clstClr = VBA.RGB(0, 0, 255)
+      Case &quot;green&quot;:  clstClr = VBA.RGB(0, 255, 0)
+      Case &quot;orange&quot;: clstClr = VBA.RGB(255, 192, 0)
+      Case &quot;purple&quot;: clstClr = VBA.RGB(112, 48, 160)
+    End Select
+
+    '.AddConnector(msoConnectorCurve, &quot;BeginX&quot;, &quot;BeginY&quot;, &quot;EndX&quot;, &quot;EndY&quot;)
+    Sheet12.Shapes.AddConnector(msoConnectorCurve, bgnX, bgnY, endX, endY).Select
+
+    With Selection.ShapeRange.Line
+      .Visible = msoTrue
+      .ForeColor.RGB = clstClr
+      .Weight = wgt
+      .Transparency = 0.5
+    End With
+  Next i
+  Sheet12.Range(&quot;A1&quot;).Select
+End Sub'
+</code></pre>
   </main>
+  <div id="disqus-container">
+  
+</div>
+
+  
+<script src="https://utteranc.es/client.js"
+        repo="alanoakes/alanoakes.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+<style>
+    .utterances-frame {
+        background-color: transparent;
+    }
+</style>
+<script>
+    function changeTheme(theme) {
+        const message = {
+            type: "set-theme",
+            theme
+        };
+        const utteranc = document.querySelector(".utterances-frame");
+        utteranc.contentWindow.postMessage(message, "https://utteranc.es");
+    }
+
+    document.onreadystatechange = () => {
+        if (document.readyState === "complete") {
+            
+            if (!document.getElementById("darkTheme").disabled) {
+                changeTheme("photon-dark");
+            }
+            
+            document.getElementById("themer").addEventListener("click", () => {
+                changeTheme(document.getElementById("darkTheme").disabled ? "photon-dark" : "github-light");
+            });
+        }
+    };
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by
+    utterances.</a></noscript>
+
 
           
             <footer role="contentinfo">
