@@ -285,9 +285,6 @@ Example Word Study For example, each biblical use of the word “jealous” is i
       <strong>Publish date: </strong>Jul 07, 2023
       
         
-          <br>
-          <strong>Last updated: </strong>Jul 07, 2023
-        
       
     </div>
 
@@ -359,50 +356,70 @@ with their own context. &ldquo;Jealousy&rdquo; is shown in the Bible so differen
 a powerful aspect of God and yet as also &ldquo;rottenness of the bones (Pro
 14:30)&rdquo;.</p>
 <h3 id="word-study-correlations">Word Study Correlations</h3>
-<p><img src="1629870387101.jpg" alt="pic1"></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+<figure role="group" aria-describedby="caption-94944b0da4f36269f57547547a1d2c45">
+  <a href="/bible-miner-sankey-chart/1629870387101.jpg" class="img-link">
+    <img src="/bible-miner-sankey-chart/1629870387101_hu6e8c1bbb051bda6729695e4bce2e0c7e_105030_900x0_resize_q99_box.jpg">
+  </a>
+  <figcaption id="caption-94944b0da4f36269f57547547a1d2c45">
+    Counting the word usage per book, you can see each translation depicts the Biblical narrative.
+  </figcaption>
+</figure>
+
 <h3 id="vba-sankey-chart">VBA Sankey Chart</h3>
 <p>Here is the code to try it yourself:</p>
-<pre tabindex="0"><code class="language-vbscript" data-lang="vbscript">Sub sankeyCluster()
-  Dim i As Long, clstClr As Long, clust As String
-  Dim src As Range, tgt As Range, wgt As Long, maxWgt As Long
-  Dim bgnX As Single, bgnY As Single, endX As Single, endY As Single
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">sankeyCluster</span>()
+  <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, clstClr <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, clust <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+  <span style="color:#66d9ef">Dim</span> src <span style="color:#f92672">As</span> Range, tgt <span style="color:#f92672">As</span> Range, wgt <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, maxWgt <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+  <span style="color:#66d9ef">Dim</span> bgnX <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>, bgnY <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>, endX <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>, endY <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
 
-  maxWgt = Application.WorksheetFunction.Max(Sheet4.Range(&quot;$C:$C&quot;))
-  Rows(&quot;4:17&quot;).RowHeight = 40
+  maxWgt <span style="color:#f92672">=</span> Application.WorksheetFunction.Max(Sheet4.Range(<span style="color:#e6db74">&#34;$C:$C&#34;</span>))
+  Rows(<span style="color:#e6db74">&#34;4:17&#34;</span>).RowHeight <span style="color:#f92672">=</span> 40
 
-  For i = 2 To 23
-    wgt = Sheet4.Range(&quot;C&quot; &amp; i).Value
-    Set src = Sheet12.Range(Sheet4.Range(&quot;E&quot; &amp; i).Value)
-    Set tgt = Sheet12.Range(Sheet4.Range(&quot;F&quot; &amp; i).Value)
+  <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">To</span> 23
+    wgt <span style="color:#f92672">=</span> Sheet4.Range(<span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#f92672">&amp;</span> i).Value
+    <span style="color:#66d9ef">Set</span> src <span style="color:#f92672">=</span> Sheet12.Range(Sheet4.Range(<span style="color:#e6db74">&#34;E&#34;</span> <span style="color:#f92672">&amp;</span> i).Value)
+    <span style="color:#66d9ef">Set</span> tgt <span style="color:#f92672">=</span> Sheet12.Range(Sheet4.Range(<span style="color:#e6db74">&#34;F&#34;</span> <span style="color:#f92672">&amp;</span> i).Value)
 
-    bgnX = src.Left
-    bgnY = src.Top + (src.Height / 2)
-    endX = tgt.Left
-    endY = tgt.Top + (tgt.Height / 2)
+    bgnX <span style="color:#f92672">=</span> src.Left
+    bgnY <span style="color:#f92672">=</span> src.Top <span style="color:#f92672">+</span> (src.Height <span style="color:#f92672">/</span> 2)
+    endX <span style="color:#f92672">=</span> tgt.Left
+    endY <span style="color:#f92672">=</span> tgt.Top <span style="color:#f92672">+</span> (tgt.Height <span style="color:#f92672">/</span> 2)
 
-    clust = Sheet4.Range(&quot;G&quot; &amp; i).Value
-    Select Case clust
-      Case &quot;black&quot;:  clstClr = VBA.RGB(0, 0, 0)
-      Case &quot;red&quot;:    clstClr = VBA.RGB(255, 0, 0)
-      Case &quot;blue&quot;:   clstClr = VBA.RGB(0, 0, 255)
-      Case &quot;green&quot;:  clstClr = VBA.RGB(0, 255, 0)
-      Case &quot;orange&quot;: clstClr = VBA.RGB(255, 192, 0)
-      Case &quot;purple&quot;: clstClr = VBA.RGB(112, 48, 160)
-    End Select
+    clust <span style="color:#f92672">=</span> Sheet4.Range(<span style="color:#e6db74">&#34;G&#34;</span> <span style="color:#f92672">&amp;</span> i).Value
+    <span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">Case</span> clust
+      <span style="color:#66d9ef">Case</span> <span style="color:#e6db74">&#34;black&#34;</span>:  clstClr <span style="color:#f92672">=</span> VBA.RGB(0, 0, 0)
+      <span style="color:#66d9ef">Case</span> <span style="color:#e6db74">&#34;red&#34;</span>:    clstClr <span style="color:#f92672">=</span> VBA.RGB(255, 0, 0)
+      <span style="color:#66d9ef">Case</span> <span style="color:#e6db74">&#34;blue&#34;</span>:   clstClr <span style="color:#f92672">=</span> VBA.RGB(0, 0, 255)
+      <span style="color:#66d9ef">Case</span> <span style="color:#e6db74">&#34;green&#34;</span>:  clstClr <span style="color:#f92672">=</span> VBA.RGB(0, 255, 0)
+      <span style="color:#66d9ef">Case</span> <span style="color:#e6db74">&#34;orange&#34;</span>: clstClr <span style="color:#f92672">=</span> VBA.RGB(255, 192, 0)
+      <span style="color:#66d9ef">Case</span> <span style="color:#e6db74">&#34;purple&#34;</span>: clstClr <span style="color:#f92672">=</span> VBA.RGB(112, 48, 160)
+    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Select</span>
 
-    '.AddConnector(msoConnectorCurve, &quot;BeginX&quot;, &quot;BeginY&quot;, &quot;EndX&quot;, &quot;EndY&quot;)
-    Sheet12.Shapes.AddConnector(msoConnectorCurve, bgnX, bgnY, endX, endY).Select
+    <span style="color:#75715e">&#39;.AddConnector(msoConnectorCurve, &#34;BeginX&#34;, &#34;BeginY&#34;, &#34;EndX&#34;, &#34;EndY&#34;)
+</span><span style="color:#75715e"></span>    Sheet12.Shapes.AddConnector(msoConnectorCurve, bgnX, bgnY, endX, endY).Select
 
-    With Selection.ShapeRange.Line
-      .Visible = msoTrue
-      .ForeColor.RGB = clstClr
-      .Weight = wgt
-      .Transparency = 0.5
-    End With
-  Next i
-  Sheet12.Range(&quot;A1&quot;).Select
-End Sub'
-</code></pre>
+    <span style="color:#66d9ef">With</span> Selection.ShapeRange.Line
+      .Visible <span style="color:#f92672">=</span> msoTrue
+      .ForeColor.RGB <span style="color:#f92672">=</span> clstClr
+      .Weight <span style="color:#f92672">=</span> wgt
+      .Transparency <span style="color:#f92672">=</span> 0.5
+    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+  <span style="color:#66d9ef">Next</span> i
+  Sheet12.Range(<span style="color:#e6db74">&#34;A1&#34;</span>).Select
+<span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span><span style="color:#75715e">&#39;
+</span></code></pre></div>
   </main>
   <div id="disqus-container">
   
