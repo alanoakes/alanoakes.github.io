@@ -56,9 +56,7 @@ Example Word Study For example, each biblical use of the word “jealous” is i
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   
-    <link rel="stylesheet" href="/css/custom_01.css">
-  
-    <link rel="stylesheet" href="/css/custom_02.css">
+    <link rel="stylesheet" href="/css/github-dark.min.css">
   
 
   
@@ -183,7 +181,7 @@ Example Word Study For example, each biblical use of the word “jealous” is i
         
       </a>
       <p class="library-desc">
-         Welcome! Log Blog is my personal blog. Have a question? Feel free to contact me or check out my github. 
+         Have a question? Feel free to contact me or post an issue on my github. 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
@@ -246,19 +244,6 @@ Example Word Study For example, each biblical use of the word “jealous” is i
           <use href="#bookmark"></use>
         </svg>
         <span class="text">Projects</span>
-      </a>
-    </li>
-  
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/shopify/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use href="#bookmark"></use>
-        </svg>
-        <span class="text">Shopify</span>
       </a>
     </li>
   
@@ -408,47 +393,48 @@ a powerful aspect of God and yet as also &ldquo;rottenness of the bones (Pro
 
 <h3 id="vba-sankey-chart">VBA Sankey Chart</h3>
 <p>Here is the code to try it yourself:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">sankeyCluster</span>()
-  <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, clstClr <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, clust <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
-  <span style="color:#66d9ef">Dim</span> src <span style="color:#f92672">As</span> Range, tgt <span style="color:#f92672">As</span> Range, wgt <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, maxWgt <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
-  <span style="color:#66d9ef">Dim</span> bgnX <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>, bgnY <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>, endX <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>, endY <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+<pre><code class="language-vb">Sub sankeyCluster()
+  Dim i As Long, clstClr As Long, clust As String
+  Dim src As Range, tgt As Range, wgt As Long, maxWgt As Long
+  Dim bgnX As Single, bgnY As Single, endX As Single, endY As Single
 
-  maxWgt <span style="color:#f92672">=</span> Application.WorksheetFunction.Max(Sheet4.Range(<span style="color:#e6db74">&#34;$C:$C&#34;</span>))
-  Rows(<span style="color:#e6db74">&#34;4:17&#34;</span>).RowHeight <span style="color:#f92672">=</span> 40
+  maxWgt = Application.WorksheetFunction.Max(Sheet4.Range(&quot;$C:$C&quot;))
+  Rows(&quot;4:17&quot;).RowHeight = 40
 
-  <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">To</span> 23
-    wgt <span style="color:#f92672">=</span> Sheet4.Range(<span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#f92672">&amp;</span> i).Value
-    <span style="color:#66d9ef">Set</span> src <span style="color:#f92672">=</span> Sheet12.Range(Sheet4.Range(<span style="color:#e6db74">&#34;E&#34;</span> <span style="color:#f92672">&amp;</span> i).Value)
-    <span style="color:#66d9ef">Set</span> tgt <span style="color:#f92672">=</span> Sheet12.Range(Sheet4.Range(<span style="color:#e6db74">&#34;F&#34;</span> <span style="color:#f92672">&amp;</span> i).Value)
+  For i = 2 To 23
+    wgt = Sheet4.Range(&quot;C&quot; &amp; i).Value
+    Set src = Sheet12.Range(Sheet4.Range(&quot;E&quot; &amp; i).Value)
+    Set tgt = Sheet12.Range(Sheet4.Range(&quot;F&quot; &amp; i).Value)
 
-    bgnX <span style="color:#f92672">=</span> src.Left
-    bgnY <span style="color:#f92672">=</span> src.Top <span style="color:#f92672">+</span> (src.Height <span style="color:#f92672">/</span> 2)
-    endX <span style="color:#f92672">=</span> tgt.Left
-    endY <span style="color:#f92672">=</span> tgt.Top <span style="color:#f92672">+</span> (tgt.Height <span style="color:#f92672">/</span> 2)
+    bgnX = src.Left
+    bgnY = src.Top + (src.Height / 2)
+    endX = tgt.Left
+    endY = tgt.Top + (tgt.Height / 2)
 
-    clust <span style="color:#f92672">=</span> Sheet4.Range(<span style="color:#e6db74">&#34;G&#34;</span> <span style="color:#f92672">&amp;</span> i).Value
-    <span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">Case</span> clust
-      <span style="color:#66d9ef">Case</span> <span style="color:#e6db74">&#34;black&#34;</span>:  clstClr <span style="color:#f92672">=</span> VBA.RGB(0, 0, 0)
-      <span style="color:#66d9ef">Case</span> <span style="color:#e6db74">&#34;red&#34;</span>:    clstClr <span style="color:#f92672">=</span> VBA.RGB(255, 0, 0)
-      <span style="color:#66d9ef">Case</span> <span style="color:#e6db74">&#34;blue&#34;</span>:   clstClr <span style="color:#f92672">=</span> VBA.RGB(0, 0, 255)
-      <span style="color:#66d9ef">Case</span> <span style="color:#e6db74">&#34;green&#34;</span>:  clstClr <span style="color:#f92672">=</span> VBA.RGB(0, 255, 0)
-      <span style="color:#66d9ef">Case</span> <span style="color:#e6db74">&#34;orange&#34;</span>: clstClr <span style="color:#f92672">=</span> VBA.RGB(255, 192, 0)
-      <span style="color:#66d9ef">Case</span> <span style="color:#e6db74">&#34;purple&#34;</span>: clstClr <span style="color:#f92672">=</span> VBA.RGB(112, 48, 160)
-    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Select</span>
+    clust = Sheet4.Range(&quot;G&quot; &amp; i).Value
+    Select Case clust
+      Case &quot;black&quot;:  clstClr = VBA.RGB(0, 0, 0)
+      Case &quot;red&quot;:    clstClr = VBA.RGB(255, 0, 0)
+      Case &quot;blue&quot;:   clstClr = VBA.RGB(0, 0, 255)
+      Case &quot;green&quot;:  clstClr = VBA.RGB(0, 255, 0)
+      Case &quot;orange&quot;: clstClr = VBA.RGB(255, 192, 0)
+      Case &quot;purple&quot;: clstClr = VBA.RGB(112, 48, 160)
+    End Select
 
-    <span style="color:#75715e">&#39;.AddConnector(msoConnectorCurve, &#34;BeginX&#34;, &#34;BeginY&#34;, &#34;EndX&#34;, &#34;EndY&#34;)
-</span><span style="color:#75715e"></span>    Sheet12.Shapes.AddConnector(msoConnectorCurve, bgnX, bgnY, endX, endY).Select
+    '.AddConnector(msoConnectorCurve, &quot;BeginX&quot;, &quot;BeginY&quot;, &quot;EndX&quot;, &quot;EndY&quot;)
+    Sheet12.Shapes.AddConnector(msoConnectorCurve, bgnX, bgnY, endX, endY).Select
 
-    <span style="color:#66d9ef">With</span> Selection.ShapeRange.Line
-      .Visible <span style="color:#f92672">=</span> msoTrue
-      .ForeColor.RGB <span style="color:#f92672">=</span> clstClr
-      .Weight <span style="color:#f92672">=</span> wgt
-      .Transparency <span style="color:#f92672">=</span> 0.5
-    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
-  <span style="color:#66d9ef">Next</span> i
-  Sheet12.Range(<span style="color:#e6db74">&#34;A1&#34;</span>).Select
-<span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span><span style="color:#75715e">&#39;
-</span></code></pre></div>
+    With Selection.ShapeRange.Line
+      .Visible = msoTrue
+      .ForeColor.RGB = clstClr
+      .Weight = wgt
+      .Transparency = 0.5
+    End With
+  Next i
+  Sheet12.Range(&quot;A1&quot;).Select
+End Sub'
+</code></pre>
+
   </main>
   <div id="disqus-container">
   
@@ -528,9 +514,7 @@ a powerful aspect of God and yet as also &ldquo;rottenness of the bones (Pro
 
 
 
-  <script src="/js/custom_01.js"></script>
-
-  <script src="/js/custom_02.js"></script>
+  <script src="/js/highlight.min.js"></script>
 
 
     

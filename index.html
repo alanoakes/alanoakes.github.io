@@ -52,9 +52,7 @@
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   
-    <link rel="stylesheet" href="/css/custom_01.css">
-  
-    <link rel="stylesheet" href="/css/custom_02.css">
+    <link rel="stylesheet" href="/css/github-dark.min.css">
   
 
   
@@ -181,7 +179,7 @@
         
       </a>
       <p class="library-desc">
-         Welcome! Log Blog is my personal blog. Have a question? Feel free to contact me or check out my github. 
+         Have a question? Feel free to contact me or post an issue on my github. 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
@@ -252,19 +250,6 @@
       
       
       
-      <a href="/shopify/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use href="#bookmark"></use>
-        </svg>
-        <span class="text">Shopify</span>
-      </a>
-    </li>
-  
-    <li class="pattern">
-      
-      
-      
-      
       <a href="/about/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use href="#bookmark"></use>
@@ -303,15 +288,47 @@ img.thumb {
   height: auto;
 }
 .content:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5)
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  border: 1px solid #ddd;
 }
+
 .content {
   height: auto;
   width: 30%;
   padding: 5px;
-  border: 1px solid #ddd; /* Grey */
-  border-radius: 15px;
-  margin: 5px;
+  border: 0.5px solid #ddd; /* Grey */
+  border-radius: 2px;
+  margin: 10px;
+  position: relative;
+}
+.content::before,
+.content::after {
+  --scale: 0;
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+  transform-origin: bottom center;
+  transition: 100ms transform;
+}
+
+.content::before {
+  content: attr(data-tooltip);
+  width: max-content;
+  max-width: 75%;
+  height: auto;
+  padding: 0.5rem;
+  border-radius: 2px;
+  border: 1px solid black;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  text-align: center;
+  font-size: 11px;
+  background: white;
+  color: black;
+}
+
+.content:hover::before {
+  --scale: 1;
 }
 a {
   border-bottom: none !important;
@@ -320,6 +337,9 @@ a {
     display:flex;
     flex-flow: row wrap;
     justify-content: center;
+}
+h4#img-title {
+  padding-top: 5px !important;
 }
 </style>
 <div align="center">
@@ -337,33 +357,35 @@ a {
     content.
   </p>
   <div class="flex-container">
-    <div class="content">
+    <div class="content" data-tooltip="GitHub is a code hosting platform for version control and collaboration.">
       <a href="https://github.com/alanoakes">
-      <h4>GitHub</h4>
+      <h4 id="img-title">GitHub</h4>
+        <span></span>
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="thumb" />
       </a>
     </div>
-    <div class="content">
+    <div class="content" data-tooltip="Shopify is a user-friendly e-commerce platform that helps small businesses build an online store and sell online through one streamlined dashboard.">
       <a href="about:blank">
-      <h4>Shopify</h4>
+      <h4 id="img-title">Shopify</h4>
+        <span></span>
         <img src="shopify.svg" class="thumb" />
       </a>
     </div>
-    <div class="content">
+    <div class="content" data-tooltip="Rpubs is an open publishing platform for HTML documents produced using RMarkdown from within RStudio ...">
       <a href="https://rpubs.com/alanoakes/">
-      <h4>RPubs</h4>
+      <h4 id="img-title">RPubs</h4>
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg" class="thumb" />
       </a>
     </div>
-    <div class="content">
+    <div class="content" data-tooltip="... is considered a 'micro-task' site, where you can do relatively quick, small one-off tasks which they call 'gigs.'">
       <a href="about:blank">
-      <h4>Fiverr</h4>
+      <h4 id="img-title">Fiverr</h4>
         <img src="fiverr.svg" class="thumb" />
       </a>
     </div>
-    <div class="content">
+    <div class="content" data-tooltip="Upwork is an online freelance marketplace. Clients come to the platform to look for freelance talent to work on their projects.">
       <a href="about:blank">
-      <h4>Upwork</h4>
+      <h4 id="img-title">Upwork</h4>
         <img src="upwork.svg" class="thumb" />
       </a>
     </div>
@@ -407,9 +429,7 @@ a {
 
 
 
-  <script src="/js/custom_01.js"></script>
-
-  <script src="/js/custom_02.js"></script>
+  <script src="/js/highlight.min.js"></script>
 
 
     

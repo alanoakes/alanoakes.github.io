@@ -5,6 +5,12 @@
     font-weight: bold;
     font-style: normal;
 } */
+@font-face {
+    font-family: 'Timeburner';
+    src: url('https://alanoakes.github.io/css/fonts/Timeburner.woff2') format('woff2'), url('https://alanoakes.github.io/css/fonts/miriamlibre-bold.woff2') format('woff2');
+    font-weight: regular;
+    font-style: normal;
+}
 
 /* latin-ext */
 @font-face {
@@ -15,11 +21,42 @@
   src: url(https://fonts.gstatic.com/s/ibmplexmono/v19/-F63fjptAgt5VM-kVkqdyU8n1iEq129k.woff2) format('woff2');
   unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
+/* latin -- Italic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v19/-F6rfjptAgt5VM-kVkqdyU8n1ioStkdip-8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIFsdA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexsanscondensed/v14/Gg8lN4UfRSqiPg7Jn2ZI12V4DCEwkj1E4LVeHYapyK4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 *,
 *::before,
 *::after {
     /* font-family: inherit; */
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'IBM Plex Sans';
     background-color: inherit;
     color: inherit;
     margin: 0;
@@ -29,7 +66,8 @@
 html {
     font-size: calc(1em + 0.33vw);
     /* font-family: Arial, Helvetica Neue, sans-serif; */
-    font-family: 'IBM Plex Mono', monospace;
+    /* font-family: 'IBM Plex Mono', monospace; */
+    font-family: 'IBM Plex Mono';
     line-height: 1.5;
     color: #111;
     background-color: #fefefe;
@@ -133,7 +171,7 @@ h2,
 h3,
 h4 {
     /* font-family: Miriam Libre, serif; */
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Timeburner';
     line-height: 1.125;
 }
 h1 {
@@ -149,7 +187,7 @@ h4,
 h5 {
     font-size: 1rem;
     /* font-family: PT Sans, sans-serif; */
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Timeburner';
 }
 h5 {
     font-size: 0.85rem;
@@ -173,7 +211,7 @@ pre,
 code {
     /* font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; */
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.85em;
+    font-size: 0.75em;
 }
 .cmd {
     padding: 0.75rem;
