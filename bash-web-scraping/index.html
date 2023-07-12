@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.92.2" />
-  <link rel="canonical" href="https://alanoakes.github.io/tags/textmining/" />
+  <link rel="canonical" href="https://alanoakes.github.io/bash-web-scraping/" />
 
   
     
-    <meta name="description" content="TextMining">
+    <meta name="description" content="Here is web scraping tip to put in your toolbox.
+Problem I ran into this headache when building a web scraper for extracting some personal data sets and I found such a simple solution I had to share!!
+When looping over an array of variables with page numbers I ran into a problem since web scraping does not use a browser and the variables don’t have the same amount of pages.">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://alanoakes.github.io/apple-touch-icon.png">
@@ -58,7 +60,7 @@
 
   
   
-  <title>TextMining | Log Blog</title>
+  <title>Linux Web-Scraping | Log Blog</title>
 </head>
 
   <body>
@@ -210,7 +212,7 @@
       
       
       
-      <a href="/post/" >
+      <a href="/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use href="#bookmark"></use>
         </svg>
@@ -223,7 +225,7 @@
       
       
       
-      <a href="/tags/" aria-current="page">
+      <a href="/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use href="#bookmark"></use>
         </svg>
@@ -279,68 +281,139 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>TextMining</h1>
+  <main id="main">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use href="#bookmark"></use>
+      </svg>
+      Linux Web-Scraping
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong>Publish date: </strong>Jul 12, 2023
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use href="#tag"></use>
+              </svg>
+              
+              <a href="/tags/bash/">Bash</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use href="#tag"></use>
+              </svg>
+              
+              <a href="/tags/dataanalysis/">DataAnalysis</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use href="#tag"></use>
+              </svg>
+              
+              <a href="/tags/webscraping/">WebScraping</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+
+
+    <p>Here is web scraping tip to put in your toolbox.</p>
+<h3 id="problem">Problem</h3>
+<p>I ran into this headache when building a web scraper for extracting some
+personal data sets and I found such a simple solution I had to share!!</p>
+<p>When looping over an array of variables with page numbers I ran into a problem
+since web scraping does not use a browser and the variables don&rsquo;t have the same
+amount of pages. The problem is called redirection. Redirection happens when
+a website host points a user to a new page from a 400-500 response code.</p>
+<h3 id="solution">Solution</h3>
+<p>The way around this is to set your <code>wget</code> call with <code>--max-redirect</code> to 0. If
+you do not set it to 0, then your data set duplicates rows since the host will
+redirect you to a previous connection each time you loop over the non-existent
+page numbers.</p>
+
+
+
+
+
+
+
+
+
   
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
+
+
+<figure role="group" aria-describedby="caption-a86f3b811bcfa1ca71cf0d8dfa816786">
+  <a href="/bash-web-scraping/bashWebScraping.jpg" class="img-link">
+    <img src="/bash-web-scraping/bashWebScraping_hu4b4076e47654043646f7783c70d3f4f5_42723_700x0_resize_q99_box.jpg">
+  </a>
+  <figcaption id="caption-a86f3b811bcfa1ca71cf0d8dfa816786">
+    Note: the above code example is not active, but kept simple for explanation purposes.
+  </figcaption>
+</figure>
+
+<p>What are your thoughts about dealing with redirection in web scraping?</p>
+
+  </main>
+  <div id="disqus-container">
   
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="/bible-miner-bash-forgiveness/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use href="#bookmark"></use>
-          </svg>
-          Word Study In The Terminal
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/vba-string-cleaner-addin/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use href="#bookmark"></use>
-          </svg>
-          Excel String Cleaner Add-In
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/bible-miner-sankey-chart/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use href="#bookmark"></use>
-          </svg>
-          Word Study Sankey Chart
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+</div>
+
+  
+<script src="https://utteranc.es/client.js"
+        repo="alanoakes/alanoakes.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+<style>
+    .utterances-frame {
+        background-color: transparent;
+    }
+</style>
+<script>
+    function changeTheme(theme) {
+        const message = {
+            type: "set-theme",
+            theme
+        };
+        const utteranc = document.querySelector(".utterances-frame");
+        utteranc.contentWindow.postMessage(message, "https://utteranc.es");
+    }
+
+    document.onreadystatechange = () => {
+        if (document.readyState === "complete") {
+            
+            if (!document.getElementById("darkTheme").disabled) {
+                changeTheme("photon-dark");
+            }
+            
+            document.getElementById("themer").addEventListener("click", () => {
+                changeTheme(document.getElementById("darkTheme").disabled ? "photon-dark" : "github-light");
+            });
+        }
+    };
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by
+    utterances.</a></noscript>
+
 
           
             <footer role="contentinfo">

@@ -6,11 +6,38 @@
     <description>Recent content in Tags on Log Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jul 2023 13:23:00 +0000</lastBuildDate><atom:link href="https://alanoakes.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jul 2023 01:01:00 +0000</lastBuildDate><atom:link href="https://alanoakes.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bash</title>
+      <link>https://alanoakes.github.io/tags/bash/</link>
+      <pubDate>Wed, 12 Jul 2023 01:01:00 +0000</pubDate>
+      
+      <guid>https://alanoakes.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DataAnalysis</title>
+      <link>https://alanoakes.github.io/tags/dataanalysis/</link>
+      <pubDate>Wed, 12 Jul 2023 01:01:00 +0000</pubDate>
+      
+      <guid>https://alanoakes.github.io/tags/dataanalysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WebScraping</title>
+      <link>https://alanoakes.github.io/tags/webscraping/</link>
+      <pubDate>Wed, 12 Jul 2023 01:01:00 +0000</pubDate>
+      
+      <guid>https://alanoakes.github.io/tags/webscraping/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Bible</title>
       <link>https://alanoakes.github.io/tags/bible/</link>
-      <pubDate>Fri, 07 Jul 2023 13:23:00 +0000</pubDate>
+      <pubDate>Wed, 12 Jul 2023 00:43:00 +0000</pubDate>
       
       <guid>https://alanoakes.github.io/tags/bible/</guid>
       <description></description>
@@ -19,9 +46,54 @@
     <item>
       <title>BibleMiner</title>
       <link>https://alanoakes.github.io/tags/bibleminer/</link>
-      <pubDate>Fri, 07 Jul 2023 13:23:00 +0000</pubDate>
+      <pubDate>Wed, 12 Jul 2023 00:43:00 +0000</pubDate>
       
       <guid>https://alanoakes.github.io/tags/bibleminer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://alanoakes.github.io/tags/r/</link>
+      <pubDate>Wed, 12 Jul 2023 00:43:00 +0000</pubDate>
+      
+      <guid>https://alanoakes.github.io/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TextMining</title>
+      <link>https://alanoakes.github.io/tags/textmining/</link>
+      <pubDate>Wed, 12 Jul 2023 00:43:00 +0000</pubDate>
+      
+      <guid>https://alanoakes.github.io/tags/textmining/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DataCleaning</title>
+      <link>https://alanoakes.github.io/tags/datacleaning/</link>
+      <pubDate>Tue, 11 Jul 2023 23:58:00 +0000</pubDate>
+      
+      <guid>https://alanoakes.github.io/tags/datacleaning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ExcelSkills</title>
+      <link>https://alanoakes.github.io/tags/excelskills/</link>
+      <pubDate>Tue, 11 Jul 2023 23:58:00 +0000</pubDate>
+      
+      <guid>https://alanoakes.github.io/tags/excelskills/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VisualBasic</title>
+      <link>https://alanoakes.github.io/tags/visualbasic/</link>
+      <pubDate>Tue, 11 Jul 2023 23:58:00 +0000</pubDate>
+      
+      <guid>https://alanoakes.github.io/tags/visualbasic/</guid>
       <description></description>
     </item>
     
@@ -31,24 +103,6 @@
       <pubDate>Fri, 07 Jul 2023 13:23:00 +0000</pubDate>
       
       <guid>https://alanoakes.github.io/tags/sankeychart/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TextMining</title>
-      <link>https://alanoakes.github.io/tags/textmining/</link>
-      <pubDate>Fri, 07 Jul 2023 13:23:00 +0000</pubDate>
-      
-      <guid>https://alanoakes.github.io/tags/textmining/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VisualBasic</title>
-      <link>https://alanoakes.github.io/tags/visualbasic/</link>
-      <pubDate>Fri, 07 Jul 2023 13:23:00 +0000</pubDate>
-      
-      <guid>https://alanoakes.github.io/tags/visualbasic/</guid>
       <description></description>
     </item>
     

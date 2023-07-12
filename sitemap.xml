@@ -2,35 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://alanoakes.github.io/tags/bible/</loc>
-    <lastmod>2023-07-08T03:47:44-05:00</lastmod>
+    <loc>https://alanoakes.github.io/tags/bash/</loc>
+    <lastmod>2023-07-12T01:01:00+00:00</lastmod>
   </url><url>
-    <loc>https://alanoakes.github.io/tags/bibleminer/</loc>
-    <lastmod>2023-07-08T03:47:44-05:00</lastmod>
+    <loc>https://alanoakes.github.io/tags/dataanalysis/</loc>
+    <lastmod>2023-07-12T01:01:00+00:00</lastmod>
   </url><url>
-    <loc>https://alanoakes.github.io/tags/sankeychart/</loc>
-    <lastmod>2023-07-08T03:47:44-05:00</lastmod>
+    <loc>https://alanoakes.github.io/bash-web-scraping/</loc>
+    <lastmod>2023-07-12T01:01:00+00:00</lastmod>
   </url><url>
     <loc>https://alanoakes.github.io/tags/</loc>
-    <lastmod>2023-07-08T03:47:44-05:00</lastmod>
+    <lastmod>2023-07-12T01:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alanoakes.github.io/tags/webscraping/</loc>
+    <lastmod>2023-07-12T01:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alanoakes.github.io/tags/bible/</loc>
+    <lastmod>2023-07-12T00:43:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alanoakes.github.io/tags/bibleminer/</loc>
+    <lastmod>2023-07-12T00:43:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alanoakes.github.io/tags/r/</loc>
+    <lastmod>2023-07-12T00:43:00+00:00</lastmod>
   </url><url>
     <loc>https://alanoakes.github.io/tags/textmining/</loc>
-    <lastmod>2023-07-08T03:47:44-05:00</lastmod>
+    <lastmod>2023-07-12T00:43:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alanoakes.github.io/bible-miner-bash-forgiveness/</loc>
+    <lastmod>2023-07-12T00:43:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alanoakes.github.io/tags/datacleaning/</loc>
+    <lastmod>2023-07-11T23:58:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alanoakes.github.io/vba-string-cleaner-addin/</loc>
+    <lastmod>2023-07-11T23:58:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alanoakes.github.io/tags/excelskills/</loc>
+    <lastmod>2023-07-11T23:58:00+00:00</lastmod>
   </url><url>
     <loc>https://alanoakes.github.io/tags/visualbasic/</loc>
+    <lastmod>2023-07-11T23:58:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alanoakes.github.io/tags/sankeychart/</loc>
     <lastmod>2023-07-08T03:47:44-05:00</lastmod>
   </url><url>
     <loc>https://alanoakes.github.io/bible-miner-sankey-chart/</loc>
     <lastmod>2023-07-08T03:47:44-05:00</lastmod>
   </url><url>
     <loc>https://alanoakes.github.io/about/</loc>
-    <lastmod>2023-07-08T03:47:44-05:00</lastmod>
+    <lastmod>2023-07-11T10:19:09-05:00</lastmod>
   </url><url>
     <loc>https://alanoakes.github.io/post/</loc>
     <lastmod>2023-07-07T11:31:50-05:00</lastmod>
   </url><url>
     <loc>https://alanoakes.github.io/</loc>
-    <lastmod>2023-07-08T03:47:44-05:00</lastmod>
+    <lastmod>2023-07-11T10:19:09-05:00</lastmod>
   </url><url>
     <loc>https://alanoakes.github.io/projects/</loc>
     <lastmod>2023-07-08T03:47:44-05:00</lastmod>

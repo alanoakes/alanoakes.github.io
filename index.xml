@@ -7,6 +7,39 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://alanoakes.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Linux Web-Scraping</title>
+      <link>https://alanoakes.github.io/bash-web-scraping/</link>
+      <pubDate>Wed, 12 Jul 2023 01:01:00 +0000</pubDate>
+      
+      <guid>https://alanoakes.github.io/bash-web-scraping/</guid>
+      <description>Here is web scraping tip to put in your toolbox.
+Problem I ran into this headache when building a web scraper for extracting some personal data sets and I found such a simple solution I had to share!!
+When looping over an array of variables with page numbers I ran into a problem since web scraping does not use a browser and the variables don&amp;rsquo;t have the same amount of pages.</description>
+    </item>
+    
+    <item>
+      <title>Word Study In The Terminal</title>
+      <link>https://alanoakes.github.io/bible-miner-bash-forgiveness/</link>
+      <pubDate>Wed, 12 Jul 2023 00:43:00 +0000</pubDate>
+      
+      <guid>https://alanoakes.github.io/bible-miner-bash-forgiveness/</guid>
+      <description>Overview In my nerdy bible study tonight (shown in the picture below), I found something so profound, amazing and simple&amp;hellip;
+I was looking for the most common word usage of forgiveness throughout the Bible and its this Hebrew word [ נָשָׂא - nāśā&#39;] with the Strongs number H5375, and it shows up all throughout the Bible!
+Example Uses The word picture is so powerful as shown in its top 10 uses:</description>
+    </item>
+    
+    <item>
+      <title>Excel String Cleaner Add-In</title>
+      <link>https://alanoakes.github.io/vba-string-cleaner-addin/</link>
+      <pubDate>Tue, 11 Jul 2023 23:58:00 +0000</pubDate>
+      
+      <guid>https://alanoakes.github.io/vba-string-cleaner-addin/</guid>
+      <description>Here is a free Excel Add-In to clean dirty text the easy way!
+Back Story I have had to make several text cleaning functionalities for the front-end of Excel lately due banking entries, randomized strings, you name it.
+I thought, why not just build an Add-In I can install in any workbook that needs it? Also, I figured you guys could use it since there doesn’t seem to be any Excel function like this.</description>
+    </item>
+    
+    <item>
       <title>Word Study Sankey Chart</title>
       <link>https://alanoakes.github.io/bible-miner-sankey-chart/</link>
       <pubDate>Fri, 07 Jul 2023 13:23:00 +0000</pubDate>
@@ -24,7 +57,7 @@ Example Word Study For example, each biblical use of the word &amp;ldquo;jealous
       <pubDate>Fri, 07 Jul 2023 11:20:00 +0000</pubDate>
       
       <guid>https://alanoakes.github.io/about/</guid>
-      <description>I am a Christian, husband, father, and a Programmer Analyst.  As a Programmer Analyst with over a decade of experience in customer service, my passion is developing applications and solutions that work ... &amp;nbsp;&amp;nbsp; so you do not have to.  Feel free to connect with me on the below social media platforms or use my moonlander layout.  &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;   Programmer Analyst: &amp;ldquo;A person who analyzes and designs information systems and designs and writes the application programs for the system.</description>
+      <description>I am a Christian, husband, father, and a Programmer Analyst.  As a Programmer Analyst with over a decade of experience in customer service, my passion is developing applications and solutions that work ... &amp;nbsp;&amp;nbsp; so you do not have to.  Feel free to connect with me on the below social media platforms or use my moonlander layout.   &amp;nbsp;&amp;nbsp;  &amp;nbsp;&amp;nbsp;  &amp;nbsp;&amp;nbsp;  &amp;nbsp;&amp;nbsp;   Programmer Analyst: &amp;ldquo;A person who analyzes and designs information systems and designs and writes the application programs for the system.</description>
     </item>
     
     <item>

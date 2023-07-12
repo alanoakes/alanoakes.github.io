@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.92.2" />
-  <link rel="canonical" href="https://alanoakes.github.io/tags/textmining/" />
+  <link rel="canonical" href="https://alanoakes.github.io/vba-string-cleaner-addin/" />
 
   
     
-    <meta name="description" content="TextMining">
+    <meta name="description" content="Here is a free Excel Add-In to clean dirty text the easy way!
+Back Story I have had to make several text cleaning functionalities for the front-end of Excel lately due banking entries, randomized strings, you name it.
+I thought, why not just build an Add-In I can install in any workbook that needs it? Also, I figured you guys could use it since there doesn’t seem to be any Excel function like this.">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://alanoakes.github.io/apple-touch-icon.png">
@@ -58,7 +60,7 @@
 
   
   
-  <title>TextMining | Log Blog</title>
+  <title>Excel String Cleaner Add-In | Log Blog</title>
 </head>
 
   <body>
@@ -210,7 +212,7 @@
       
       
       
-      <a href="/post/" >
+      <a href="/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use href="#bookmark"></use>
         </svg>
@@ -223,7 +225,7 @@
       
       
       
-      <a href="/tags/" aria-current="page">
+      <a href="/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use href="#bookmark"></use>
         </svg>
@@ -279,68 +281,178 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>TextMining</h1>
+  <main id="main">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use href="#bookmark"></use>
+      </svg>
+      Excel String Cleaner Add-In
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong>Publish date: </strong>Jul 11, 2023
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use href="#tag"></use>
+              </svg>
+              
+              <a href="/tags/textmining/">TextMining</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use href="#tag"></use>
+              </svg>
+              
+              <a href="/tags/datacleaning/">DataCleaning</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use href="#tag"></use>
+              </svg>
+              
+              <a href="/tags/visualbasic/">VisualBasic</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use href="#tag"></use>
+              </svg>
+              
+              <a href="/tags/excelskills/">ExcelSkills</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+
+
+    <p>Here is a free Excel Add-In to clean dirty text the easy way!</p>
+<p><img src="ExcelAddIn.jpg" alt="PictureExample"></p>
+<h3 id="back-story">Back Story</h3>
+<p>I have had to make several text cleaning functionalities for the front-end of
+Excel lately due banking entries, randomized strings, you name it.</p>
+<p>I thought, why not just build an Add-In I can install in any workbook that
+needs it? Also, I figured you guys could use it since there doesn’t seem to be
+any Excel function like this.</p>
+<h3 id="how-to-use-it">How To Use It</h3>
+<ol>
+<li>Select the cell with the string.</li>
+<li>Select options <code>1</code>, <code>2</code> or <code>3</code> for whichever type of procedure you want.</li>
+</ol>
+<h3 id="download-it">Download It</h3>
+<p>Feel free to download the Excel Add-In or just fork my <a href="https://github.com/alanoakes/CleanString_ExcelAddIn">repository</a>
+if you want to modify the function.</p>
+<h4 id="vba-class">VBA Class</h4>
+<p>Here is the code in a <code>VBA</code> Class module if you feel comfortable plugging it in:</p>
+<pre><code class="language-vb">' Declarations
+' ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Option Explicit
+Private i    As Long
+Private iStr As String
+Private list As Object
+Private var  As Variant
+
+' Options Enumerator
+' ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Public Enum optStr
+  Alpha_
+  Numer_
+  Specl_
+End Enum
+
+' Class Initializer for the ArrayList
+' ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Private Sub Class_Initialize()
+  Set list = CreateObject(&quot;System.Collections.ArrayList&quot;)
+End Sub
+
+' Main Function (Returns String)
+' ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Public Function oMain(oStr As String, opt As optStr) As String
+  iStr = oStr
+  Select Case opt
+    Case optStr.Alpha_: oMain = clnStr(iStr, Array(32, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122))
+    Case optStr.Numer_: oMain = clnStr(iStr, Array(32, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57))
+    Case optStr.Specl_: oMain = clnStr(iStr, Array(32, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122))
+  End Select
+End Function
+
+' Supporting Function
+' ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Private Function clnStr(str As String, arr As Variant) As String
+  MakeSeq arr
+  For i = 1 To Len(str)
+    Select Case list.Contains(Asc(Mid(str, i, 1)))
+      Case True
+      Case False: Mid(str, i, 1) = &quot; &quot;
+    End Select
+  Next i
+  list.Clear
+  str = Application.Trim(str)
+  clnStr = str
+End Function
+</code></pre>
+
+  </main>
+  <div id="disqus-container">
   
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
+</div>
+
   
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="/bible-miner-bash-forgiveness/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use href="#bookmark"></use>
-          </svg>
-          Word Study In The Terminal
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/vba-string-cleaner-addin/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use href="#bookmark"></use>
-          </svg>
-          Excel String Cleaner Add-In
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/bible-miner-sankey-chart/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use href="#bookmark"></use>
-          </svg>
-          Word Study Sankey Chart
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+<script src="https://utteranc.es/client.js"
+        repo="alanoakes/alanoakes.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+<style>
+    .utterances-frame {
+        background-color: transparent;
+    }
+</style>
+<script>
+    function changeTheme(theme) {
+        const message = {
+            type: "set-theme",
+            theme
+        };
+        const utteranc = document.querySelector(".utterances-frame");
+        utteranc.contentWindow.postMessage(message, "https://utteranc.es");
+    }
+
+    document.onreadystatechange = () => {
+        if (document.readyState === "complete") {
+            
+            if (!document.getElementById("darkTheme").disabled) {
+                changeTheme("photon-dark");
+            }
+            
+            document.getElementById("themer").addEventListener("click", () => {
+                changeTheme(document.getElementById("darkTheme").disabled ? "photon-dark" : "github-light");
+            });
+        }
+    };
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by
+    utterances.</a></noscript>
+
 
           
             <footer role="contentinfo">

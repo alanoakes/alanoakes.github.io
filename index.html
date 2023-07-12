@@ -286,19 +286,20 @@
 img.thumb {
   width: 100%;
   height: auto;
+  margin-top: 15px;
 }
 .content:hover {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
-  border: 1px solid #ddd;
+  border: 2px solid black;
 }
 
 .content {
   height: auto;
   width: 30%;
   padding: 5px;
-  border: 0.5px solid #ddd; /* Grey */
+  border: none;
   border-radius: 2px;
-  margin: 10px;
+  margin: 5px 0px;
   position: relative;
 }
 .content::before,
@@ -309,7 +310,7 @@ img.thumb {
   left: 50%;
   transform: translateX(-50%) translateY(-100%) scale(var(--scale));
   transform-origin: bottom center;
-  transition: 100ms transform;
+  transition: 200ms transform;
 }
 
 .content::before {
@@ -337,6 +338,7 @@ a {
     display:flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin: 20px;
 }
 h4#img-title {
   padding-top: 5px !important;
@@ -360,14 +362,12 @@ h4#img-title {
     <div class="content" data-tooltip="GitHub is a code hosting platform for version control and collaboration.">
       <a href="https://github.com/alanoakes">
       <h4 id="img-title">GitHub</h4>
-        <span></span>
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="thumb" />
       </a>
     </div>
     <div class="content" data-tooltip="Shopify is a user-friendly e-commerce platform that helps small businesses build an online store and sell online through one streamlined dashboard.">
       <a href="about:blank">
       <h4 id="img-title">Shopify</h4>
-        <span></span>
         <img src="shopify.svg" class="thumb" />
       </a>
     </div>
