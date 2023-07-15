@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>WebScraping on Log Blog</title>
-    <link>https://alanoakes.github.io/tags/webscraping/</link>
-    <description>Recent content in WebScraping on Log Blog</description>
+    <title>WebScraping on alanoakes.dev</title>
+    <link>https://alanoakes.dev/tags/webscraping/</link>
+    <description>Recent content in WebScraping on alanoakes.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Jul 2023 01:01:00 +0000</lastBuildDate><atom:link href="https://alanoakes.github.io/tags/webscraping/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jul 2023 01:01:00 +0000</lastBuildDate><atom:link href="https://alanoakes.dev/tags/webscraping/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Web-Scraping</title>
-      <link>https://alanoakes.github.io/bash-web-scraping/</link>
+      <link>https://alanoakes.dev/bash-web-scraping/</link>
       <pubDate>Wed, 12 Jul 2023 01:01:00 +0000</pubDate>
       
-      <guid>https://alanoakes.github.io/bash-web-scraping/</guid>
+      <guid>https://alanoakes.dev/bash-web-scraping/</guid>
       <description>Here is web scraping tip to put in your toolbox.
 Problem I ran into this headache when building a web scraper for extracting some personal data sets and I found such a simple solution I had to share!!
 When looping over an array of variables with page numbers I ran into a problem since web scraping does not use a browser and the variables don&amp;rsquo;t have the same amount of pages.</description>

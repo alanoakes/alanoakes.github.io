@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SankeyChart on Log Blog</title>
-    <link>https://alanoakes.github.io/tags/sankeychart/</link>
-    <description>Recent content in SankeyChart on Log Blog</description>
+    <title>SankeyChart on alanoakes.dev</title>
+    <link>https://alanoakes.dev/tags/sankeychart/</link>
+    <description>Recent content in SankeyChart on alanoakes.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jul 2023 13:23:00 +0000</lastBuildDate><atom:link href="https://alanoakes.github.io/tags/sankeychart/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jul 2023 13:23:00 +0000</lastBuildDate><atom:link href="https://alanoakes.dev/tags/sankeychart/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Word Study Sankey Chart</title>
-      <link>https://alanoakes.github.io/bible-miner-sankey-chart/</link>
+      <link>https://alanoakes.dev/bible-miner-sankey-chart/</link>
       <pubDate>Fri, 07 Jul 2023 13:23:00 +0000</pubDate>
       
-      <guid>https://alanoakes.github.io/bible-miner-sankey-chart/</guid>
+      <guid>https://alanoakes.dev/bible-miner-sankey-chart/</guid>
       <description>Overview I am currently taking a break from the high computing power of R libraries and learning how these these tools can practically work in other applications.
 One such chart is the Sankey Chart. I decided to make one using Visual Basic for my bible word study.
 Sankey charts really help do bible word studies (i.e. text mining) since it helps see what counting word usage (translations) alone cannot.

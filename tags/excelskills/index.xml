@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ExcelSkills on Log Blog</title>
-    <link>https://alanoakes.github.io/tags/excelskills/</link>
-    <description>Recent content in ExcelSkills on Log Blog</description>
+    <title>ExcelSkills on alanoakes.dev</title>
+    <link>https://alanoakes.dev/tags/excelskills/</link>
+    <description>Recent content in ExcelSkills on alanoakes.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Jul 2023 23:58:00 +0000</lastBuildDate><atom:link href="https://alanoakes.github.io/tags/excelskills/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jul 2023 23:58:00 +0000</lastBuildDate><atom:link href="https://alanoakes.dev/tags/excelskills/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Excel String Cleaner Add-In</title>
-      <link>https://alanoakes.github.io/vba-string-cleaner-addin/</link>
+      <link>https://alanoakes.dev/vba-string-cleaner-addin/</link>
       <pubDate>Tue, 11 Jul 2023 23:58:00 +0000</pubDate>
       
-      <guid>https://alanoakes.github.io/vba-string-cleaner-addin/</guid>
+      <guid>https://alanoakes.dev/vba-string-cleaner-addin/</guid>
       <description>Here is a free Excel Add-In to clean dirty text the easy way!
 Back Story I have had to make several text cleaning functionalities for the front-end of Excel lately due banking entries, randomized strings, you name it.
 I thought, why not just build an Add-In I can install in any workbook that needs it? Also, I figured you guys could use it since there doesn’t seem to be any Excel function like this.</description>
