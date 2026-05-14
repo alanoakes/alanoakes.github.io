@@ -1,445 +1,729 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parker Oakes — Websites & SEO for Small Business</title>
+  <meta name="description" content="Professional websites and ongoing SEO for small businesses. Local and remote. Built to rank, built to convert." />
+  <meta name="keywords" content="small business website design, SEO services, Memphis web designer, local SEO, small business SEO" />
 
-  <meta name="generator" content="Hugo 0.92.2" />
-  <link rel="canonical" href="https://alanoakes.dev/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Parker Oakes — Websites & SEO for Small Business" />
+  <meta property="og:description" content="Professional websites and ongoing SEO for small businesses. Local and remote." />
+  <meta property="og:url" content="https://alanoakes.dev" />
+  <meta property="og:type" content="website" />
 
-  
-    
-  
-
-  <link rel="apple-touch-icon" sizes="180x180" href="https://alanoakes.dev/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://alanoakes.dev/favicon-32x32.png"> 
-  <link rel="icon" type="image/png" sizes="16x16" href="https://alanoakes.dev/favicon-16x16.png"> 
-  <link rel="manifest" href="https://alanoakes.dev/site.webmanifest"> 
-  <link rel="mask-icon" href="https://alanoakes.dev/safari-pinned-tab.svg" color="#000000"> 
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Epilogue:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #f8f6f2;
+      --ink:      #18160f;
+      --green:    #1a7a4a;
+      --green-lt: #e8f5ee;
+      --green-md: #d1ead9;
+      --gold:     #c9a84c;
+      --muted:    #6b6860;
+      --rule:     #e0ddd7;
+      --white:    #ffffff;
+
+      --serif: 'Playfair Display', Georgia, serif;
+      --body:  'Epilogue', sans-serif;
+      --mono:  'JetBrains Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      visibility: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9000;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23g)'/%3E%3C/svg%3E");
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 3rem;
+      background: rgba(248,246,242,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+      transition: transform 0.3s ease;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .logo span { color: var(--green); }
+
+    .nav-right { display: flex; align-items: center; gap: 2.5rem; }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--green); }
+
+    .nav-cta {
+      background: var(--green);
+      color: var(--white);
+      padding: 0.55rem 1.25rem;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .nav-cta:hover { background: var(--ink); transform: translateY(-1px); }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 3rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -15vw; right: -10vw;
+      width: 55vw; height: 55vw;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--green-md) 0%, transparent 70%);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--green-lt);
+      border: 1px solid var(--green-md);
+      color: var(--green);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      width: fit-content;
+      margin-bottom: 2rem;
       opacity: 0;
+      animation: fadeUp 0.6s 0.1s forwards;
+    }
+
+    .badge-dot {
+      width: 6px; height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+
+    .hero-headline {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 7vw, 6.5rem);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      max-width: 14ch;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.25s forwards;
+    }
+    .hero-headline .hl { color: var(--green); font-style: italic; }
+    .hero-headline .hl-gold { color: var(--gold); }
+
+    .hero-sub-row {
+      margin-top: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.4s forwards;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 42ch;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    .hero-sub strong { color: var(--ink); font-weight: 600; }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.55s forwards;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      font-family: var(--body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-radius: 100px;
+      transition: all 0.22s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-green { background: var(--green); color: var(--white); }
+    .btn-green:hover { background: var(--ink); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,122,74,0.25); }
+
+    .btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--rule); }
+    .btn-ghost:hover { border-color: var(--green); color: var(--green); transform: translateY(-2px); }
+
+    .btn-white { background: var(--white); color: var(--green); font-weight: 700; }
+    .btn-white:hover { background: var(--ink); color: var(--white); transform: translateY(-2px); }
+
+    .btn-dark { background: var(--ink); color: var(--white); }
+    .btn-dark:hover { background: var(--white); color: var(--ink); transform: translateY(-2px); }
+
+    .btn-clear { background: rgba(255,255,255,0.15); color: var(--white); border: 1.5px solid rgba(255,255,255,0.3); }
+    .btn-clear:hover { background: rgba(255,255,255,0.25); transform: translateY(-2px); }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2.5rem; left: 3rem;
+      display: flex; align-items: center; gap: 0.75rem;
+      font-family: var(--mono); font-size: 0.65rem;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+      opacity: 0; animation: fadeUp 0.7s 0.9s forwards;
+    }
+    .scroll-line { width: 40px; height: 1px; background: var(--muted); }
+
+    /* TRUST BAR */
+    #trust {
+      background: var(--ink);
+      padding: 2rem 3rem;
+      display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;
+    }
+    .trust-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); white-space: nowrap; flex-shrink: 0; }
+    .trust-divider { width: 1px; height: 24px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+    .trust-items { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .trust-item { font-size: 0.8rem; font-weight: 500; color: rgba(248,246,242,0.6); display: flex; align-items: center; gap: 0.5rem; }
+    .trust-item::before { content: '✓'; color: var(--green); font-size: 0.75rem; }
+
+    /* SHARED */
+    .section { padding: 7rem 3rem; }
+    .section-eyebrow { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); margin-bottom: 1rem; }
+    .section-heading { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); }
+    .section-heading em { font-style: italic; color: var(--green); }
+    .section-body { font-size: 0.95rem; color: var(--muted); line-height: 1.8; max-width: 52ch; margin-top: 1rem; font-weight: 300; }
+
+    /* HOW IT WORKS */
+    #how { background: var(--white); }
+    .how-grid { margin-top: 4rem; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+    .how-step { padding: 2.5rem 2rem; border-right: 1px solid var(--rule); transition: background 0.25s; }
+    .how-step:last-child { border-right: none; }
+    .how-step:hover { background: var(--green-lt); }
+    .step-num { font-family: var(--serif); font-size: 3.5rem; font-weight: 900; color: var(--green-md); line-height: 1; margin-bottom: 1rem; transition: color 0.25s; }
+    .how-step:hover .step-num { color: var(--green); }
+    .step-title { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 0.6rem; }
+    .step-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
+
+    /* SERVICES */
+    #services { background: var(--bg); }
+    .services-layout { margin-top: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+    .service-card { background: var(--white); border: 1.5px solid var(--rule); border-radius: 8px; padding: 2.5rem; position: relative; transition: all 0.25s; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--green-lt) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; }
+    .service-card:hover { border-color: var(--green); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,122,74,0.1); }
+    .service-card:hover::before { opacity: 1; }
+
+    .service-card.featured { background: var(--green); border-color: var(--green); color: var(--white); grid-column: span 2; }
+    .service-card.featured::before { display: none; }
+    .service-card.featured:hover { background: var(--ink); border-color: var(--ink); }
+
+    .featured-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; position: relative; z-index: 1; }
+
+    .service-badge { display: inline-block; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 100px; margin-bottom: 1rem; }
+    .service-badge.bundle { background: rgba(255,255,255,0.2); color: rgba(255,255,255,0.9); }
+    .service-badge.add-on { background: var(--green-lt); color: var(--green); }
+
+    .service-name { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: var(--ink); line-height: 1.2; margin-bottom: 0.75rem; position: relative; z-index: 1; }
+    .service-card.featured .service-name { color: var(--white); }
+
+    .service-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.7; position: relative; z-index: 1; }
+    .service-card.featured .service-desc { color: rgba(255,255,255,0.75); }
+
+    .service-includes { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; position: relative; z-index: 1; }
+    .include-item { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.84rem; color: var(--muted); }
+    .service-card.featured .include-item { color: rgba(255,255,255,0.8); }
+
+    .include-check { width: 16px; height: 16px; border-radius: 50%; background: var(--green-lt); color: var(--green); display: flex; align-items: center; justify-content: center; font-size: 0.6rem; flex-shrink: 0; margin-top: 2px; }
+    .service-card.featured .include-check { background: rgba(255,255,255,0.2); color: var(--white); }
+
+    .service-cta { margin-top: 2rem; position: relative; z-index: 1; }
+
+    /* SEO */
+    #seo { background: var(--ink); color: var(--white); }
+    #seo .section-heading { color: var(--white); }
+    #seo .section-body { color: rgba(248,246,242,0.55); }
+
+    .seo-layout { margin-top: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+
+    .seo-points { display: flex; flex-direction: column; gap: 1.5rem; }
+    .seo-point { display: flex; gap: 1.25rem; align-items: flex-start; padding: 1.5rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; transition: background 0.25s, border-color 0.25s; }
+    .seo-point:hover { background: rgba(26,122,74,0.12); border-color: rgba(26,122,74,0.3); }
+    .seo-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .seo-point-title { font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 0.35rem; }
+    .seo-point-desc { font-size: 0.82rem; color: rgba(248,246,242,0.5); line-height: 1.65; }
+
+    .seo-visual { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 2.5rem; }
+    .chart-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 1.5rem; }
+    .chart-bars { display: flex; flex-direction: column; gap: 0.9rem; }
+    .chart-row { display: flex; align-items: center; gap: 1rem; }
+    .chart-keyword { font-size: 0.75rem; color: rgba(248,246,242,0.5); width: 130px; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .chart-bar-track { flex: 1; height: 6px; background: rgba(255,255,255,0.07); border-radius: 3px; overflow: hidden; }
+    .chart-bar-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--green), #2dd4bf); transform: scaleX(0); transform-origin: left; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .chart-rank { font-family: var(--mono); font-size: 0.7rem; color: var(--green); width: 30px; text-align: right; flex-shrink: 0; }
+
+    /* WHO */
+    #who { background: var(--bg); }
+    .who-grid { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+    .who-card { background: var(--white); border: 1.5px solid var(--rule); border-radius: 6px; padding: 1.75rem 1.5rem; text-align: center; transition: all 0.22s; }
+    .who-card:hover { border-color: var(--green); transform: translateY(-3px); }
+    .who-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+    .who-name { font-size: 0.85rem; font-weight: 600; color: var(--ink); }
+
+    /* FAQ */
+    #faq { background: var(--white); }
+    .faq-list { margin-top: 3.5rem; max-width: 680px; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+    .faq-item { border-bottom: 1px solid var(--rule); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { width: 100%; background: none; border: none; display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 1.75rem; font-family: var(--body); font-size: 0.9rem; font-weight: 600; color: var(--ink); cursor: pointer; text-align: left; gap: 1rem; transition: background 0.2s; }
+    .faq-q:hover { background: var(--green-lt); }
+    .faq-icon { width: 22px; height: 22px; border-radius: 50%; background: var(--green-lt); color: var(--green); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; transition: transform 0.3s, background 0.2s; line-height: 1; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--green); color: var(--white); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.3s; padding: 0 1.75rem; font-size: 0.875rem; color: var(--muted); line-height: 1.75; }
+    .faq-item.open .faq-a { max-height: 200px; padding: 0 1.75rem 1.4rem; }
+
+    /* CONTACT */
+    #contact { background: var(--green); padding: 7rem 3rem; text-align: center; position: relative; overflow: hidden; }
+    #contact::before { content: ''; position: absolute; bottom: -20%; right: -10%; width: 50vw; height: 50vw; border-radius: 50%; background: rgba(0,0,0,0.08); pointer-events: none; }
+    .contact-headline { font-family: var(--serif); font-size: clamp(2rem, 5vw, 4rem); font-weight: 900; color: var(--white); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1rem; position: relative; z-index: 1; }
+    .contact-sub { font-size: 1rem; color: rgba(255,255,255,0.75); max-width: 44ch; margin: 0 auto 2.5rem; line-height: 1.75; font-weight: 300; position: relative; z-index: 1; }
+    .contact-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; position: relative; z-index: 1; }
+    .contact-email-display { margin-top: 2rem; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.06em; color: rgba(255,255,255,0.6); position: relative; z-index: 1; }
+    .contact-email-display a { color: rgba(255,255,255,0.9); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); transition: border-color 0.2s; }
+    .contact-email-display a:hover { border-color: var(--white); }
+
+    /* FOOTER */
+    footer { background: var(--ink); padding: 2rem 3rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--serif); font-size: 0.95rem; font-weight: 700; color: var(--white); text-decoration: none; }
+    .footer-logo span { color: var(--green); }
+    .footer-links { display: flex; gap: 1.75rem; }
+    .footer-links a { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--green); }
+    .footer-copy { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); letter-spacing: 0.05em; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      #hero { padding: 7rem 1.5rem 4rem; }
+      #hero::before { display: none; }
+      .section { padding: 5rem 1.5rem; }
+      #trust { padding: 1.5rem; }
+      .how-grid { grid-template-columns: 1fr 1fr; }
+      .how-step { border-bottom: 1px solid var(--rule); }
+      .services-layout { grid-template-columns: 1fr; }
+      .service-card.featured { grid-column: span 1; }
+      .featured-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .seo-layout { grid-template-columns: 1fr; gap: 3rem; }
+      #contact { padding: 5rem 1.5rem; }
+      footer { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-headline { font-size: 2.6rem; }
+      .how-grid { grid-template-columns: 1fr; }
     }
   </style>
-
-  <style id="darkTheme">
-    .intro-and-nav,
-    .main-and-footer {
-      filter: invert(100%);
-    }
-
-    * {
-      background-color: inherit
-    }
-
-    img:not([src*=".svg"]),
-    .colors,
-    iframe,
-    .demo-container {
-      filter: invert(100%);
-    }
-  </style>
-
-  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
-
-  
-  
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
-
-  
-    <link rel="stylesheet" href="/css/github-dark.min.css">
-  
-
-  
-  
-    
-  
-  <title>alanoakes.dev</title>
 </head>
+<body>
 
-  <body>
-    <a href="#main">skip to content</a>
-    <noscript>
-  <style>
-    body {
-      visibility: visible;
-      opacity: 1;
-    }
-  </style>
-</noscript>
+  <nav id="main-nav">
+    <a href="#" class="logo">Parker<span>Oakes</span>.dev</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#seo">SEO</a></li>
+        <li><a href="#who">Who I Help</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Get a Free Quote</a>
+    </div>
+  </nav>
 
-    <svg style="display: none">
-  <symbol id="bookmark" viewBox="0 0 40 50">
-   <g transform="translate(2266 3206.2)">
-    <path style="stroke:currentColor;stroke-width:3.2637;fill:none" d="m-2262.2-3203.4-.2331 42.195 16.319-16.318 16.318 16.318.2331-42.428z"/>
-   </g>
-  </symbol>
-
-  <symbol id="w3c" viewBox="0 0 127.09899 67.763">
-   <text font-size="83" style="font-size:83px;font-family:Trebuchet;letter-spacing:-12;fill-opacity:0" letter-spacing="-12" y="67.609352" x="-26.782778">W3C</text>
-   <text font-size="83" style="font-size:83px;font-weight:bold;font-family:Trebuchet;fill-opacity:0" y="67.609352" x="153.21722" font-weight="bold">SVG</text>
-   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m33.695.377 12.062 41.016 12.067-41.016h8.731l-19.968 67.386h-.831l-12.48-41.759-12.479 41.759h-.832l-19.965-67.386h8.736l12.061 41.016 8.154-27.618-3.993-13.397h8.737z"/>
-   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m91.355 46.132c0 6.104-1.624 11.234-4.862 15.394-3.248 4.158-7.45 6.237-12.607 6.237-3.882 0-7.263-1.238-10.148-3.702-2.885-2.47-5.02-5.812-6.406-10.022l6.82-2.829c1.001 2.552 2.317 4.562 3.953 6.028 1.636 1.469 3.56 2.207 5.781 2.207 2.329 0 4.3-1.306 5.909-3.911 1.609-2.606 2.411-5.738 2.411-9.401 0-4.049-.861-7.179-2.582-9.399-1.995-2.604-5.129-3.912-9.397-3.912h-3.327v-3.991l11.646-20.133h-14.062l-3.911 6.655h-2.493v-14.976h32.441v4.075l-12.31 21.217c4.324 1.385 7.596 3.911 9.815 7.571 2.22 3.659 3.329 7.953 3.329 12.892z"/>
-   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m125.21 0 1.414 8.6-5.008 9.583s-1.924-4.064-5.117-6.314c-2.693-1.899-4.447-2.309-7.186-1.746-3.527.73-7.516 4.938-9.258 10.13-2.084 6.21-2.104 9.218-2.178 11.978-.115 4.428.58 7.043.58 7.043s-3.04-5.626-3.011-13.866c.018-5.882.947-11.218 3.666-16.479 2.404-4.627 5.954-7.404 9.114-7.728 3.264-.343 5.848 1.229 7.841 2.938 2.089 1.788 4.213 5.698 4.213 5.698l4.94-9.837z"/>
-   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m125.82 48.674s-2.208 3.957-3.589 5.48c-1.379 1.524-3.849 4.209-6.896 5.555-3.049 1.343-4.646 1.598-7.661 1.306-3.01-.29-5.807-2.032-6.786-2.764-.979-.722-3.486-2.864-4.897-4.854-1.42-2-3.634-5.995-3.634-5.995s1.233 4.001 2.007 5.699c.442.977 1.81 3.965 3.749 6.572 1.805 2.425 5.315 6.604 10.652 7.545 5.336.945 9.002-1.449 9.907-2.031.907-.578 2.819-2.178 4.032-3.475 1.264-1.351 2.459-3.079 3.116-4.108.487-.758 1.276-2.286 1.276-2.286l-1.276-6.644z"/>
-  </symbol>
-
-  <symbol id="tag" viewBox="0 0 177.16535 177.16535">
-    <g transform="translate(0 -875.2)">
-     <path style="fill-rule:evenodd;stroke-width:0;fill:currentColor" d="m159.9 894.3-68.79 8.5872-75.42 77.336 61.931 60.397 75.429-76.565 6.8495-69.755zm-31.412 31.835a10.813 10.813 0 0 1 1.8443 2.247 10.813 10.813 0 0 1 -3.5174 14.872l-.0445.0275a10.813 10.813 0 0 1 -14.86 -3.5714 10.813 10.813 0 0 1 3.5563 -14.863 10.813 10.813 0 0 1 13.022 1.2884z"/>
-    </g>
-  </symbol>
-
-  <symbol id="balloon" viewBox="0 0 141.73228 177.16535">
-   <g transform="translate(0 -875.2)">
-    <g>
-     <path style="fill:currentColor" d="m68.156 882.83-.88753 1.4269c-4.9564 7.9666-6.3764 17.321-5.6731 37.378.36584 10.437 1.1246 23.51 1.6874 29.062.38895 3.8372 3.8278 32.454 4.6105 38.459 4.6694-.24176 9.2946.2879 14.377 1.481 1.2359-3.2937 5.2496-13.088 8.886-21.623 6.249-14.668 8.4128-21.264 10.253-31.252 1.2464-6.7626 1.6341-12.156 1.4204-19.764-.36325-12.93-2.1234-19.487-6.9377-25.843-2.0833-2.7507-6.9865-7.6112-7.9127-7.8436-.79716-.20019-6.6946-1.0922-6.7755-1.0248-.02213.0182-5.0006-.41858-7.5248-.22808l-2.149-.22808h-3.3738z"/>
-     <path style="fill:currentColor" d="m61.915 883.28-3.2484.4497c-1.7863.24724-3.5182.53481-3.8494.63994-2.4751.33811-4.7267.86957-6.7777 1.5696-.28598 0-1.0254.20146-2.3695.58589-5.0418 1.4418-6.6374 2.2604-8.2567 4.2364-6.281 7.6657-11.457 18.43-12.932 26.891-1.4667 8.4111.71353 22.583 5.0764 32.996 3.8064 9.0852 13.569 25.149 22.801 37.517 1.3741 1.841 2.1708 2.9286 2.4712 3.5792 3.5437-1.1699 6.8496-1.9336 10.082-2.3263-1.3569-5.7831-4.6968-21.86-6.8361-33.002-.92884-4.8368-2.4692-14.322-3.2452-19.991-.68557-5.0083-.77707-6.9534-.74159-15.791.04316-10.803.41822-16.162 1.5026-21.503 1.4593-5.9026 3.3494-11.077 6.3247-15.852z"/>
-     <path style="fill:currentColor" d="m94.499 885.78c-.10214-.0109-.13691 0-.0907.0409.16033.13489 1.329 1.0675 2.5976 2.0723 6.7003 5.307 11.273 14.568 12.658 25.638.52519 4.1949.24765 14.361-.5059 18.523-2.4775 13.684-9.7807 32.345-20.944 53.519l-3.0559 5.7971c2.8082.76579 5.7915 1.727 8.9926 2.8441 11.562-11.691 18.349-19.678 24.129-28.394 7.8992-11.913 11.132-20.234 12.24-31.518.98442-10.02-1.5579-20.876-6.7799-28.959-.2758-.4269-.57803-.86856-.89617-1.3166-3.247-6.13-9.752-12.053-21.264-16.131-2.3687-.86369-6.3657-2.0433-7.0802-2.1166z"/>
-     <path style="fill:currentColor" d="m32.52 892.22c-.20090-.13016-1.4606.81389-3.9132 2.7457-11.486 9.0476-17.632 24.186-16.078 39.61.79699 7.9138 2.4066 13.505 5.9184 20.562 5.8577 11.77 14.749 23.219 30.087 38.74.05838.059.12188.1244.18052.1838 1.3166-.5556 2.5965-1.0618 3.8429-1.5199-.66408-.32448-1.4608-1.3297-3.8116-4.4602-5.0951-6.785-8.7512-11.962-13.051-18.486-5.1379-7.7948-5.0097-7.5894-8.0586-13.054-6.2097-11.13-8.2674-17.725-8.6014-27.563-.21552-6.3494.13041-9.2733 1.775-14.987 2.1832-7.5849 3.9273-10.986 9.2693-18.07 1.7839-2.3656 2.6418-3.57 2.4409-3.7003z"/>
-     <path style="fill:currentColor" d="m69.133 992.37c-6.2405.0309-12.635.76718-19.554 2.5706 4.6956 4.7759 9.935 10.258 12.05 12.625l4.1272 4.6202h11.493l3.964-4.4516c2.0962-2.3541 7.4804-7.9845 12.201-12.768-8.378-1.4975-16.207-2.6353-24.281-2.5955z"/>
-     <rect style="stroke-width:0;fill:currentColor" ry="2.0328" height="27.746" width="22.766" y="1017.7" x="60.201"/>
-    </g>
-   </g>
-  </symbol>
-
-  <symbol id="info" viewBox="0 0 41.667 41.667">
-   <g transform="translate(-37.035 -1004.6)">
-    <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m76.25 1030.2a18.968 18.968 0 0 1 -23.037 13.709 18.968 18.968 0 0 1 -13.738 -23.019 18.968 18.968 0 0 1 23.001 -13.768 18.968 18.968 0 0 1 13.798 22.984"/>
-    <g transform="matrix(1.1146 0 0 1.1146 -26.276 -124.92)">
-     <path style="stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m75.491 1039.5v-8.7472"/>
-     <path style="stroke-width:0;fill:currentColor" transform="scale(-1)" d="m-73.193-1024.5a2.3719 2.3719 0 0 1 -2.8807 1.7142 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
-    </g>
-   </g>
-  </symbol>
-
-  <symbol id="warning" viewBox="0 0 48.430474 41.646302">
-    <g transform="translate(-1.1273 -1010.2)">
-     <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:4.151;fill:none" d="m25.343 1012.3-22.14 37.496h44.28z"/>
-     <path style="stroke:currentColor;stroke-linecap:round;stroke-width:4.1512;fill:none" d="m25.54 1027.7v8.7472"/>
-     <path style="stroke-width:0;fill:currentColor" d="m27.839 1042.8a2.3719 2.3719 0 0 1 -2.8807 1.7143 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
-    </g>
-  </symbol>
-
-  <symbol id="menu" viewBox="0 0 50 50">
-     <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="0" x="0"/>
-     <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="20" x="0"/>
-     <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="40" x="0"/>
-   </symbol>
-
-   <symbol id="link" viewBox="0 0 50 50">
-    <g transform="translate(0 -1002.4)">
-     <g transform="matrix(.095670 0 0 .095670 2.3233 1004.9)">
-      <g>
-       <path style="stroke-width:0;fill:currentColor" d="m452.84 192.9-128.65 128.65c-35.535 35.54-93.108 35.54-128.65 0l-42.881-42.886 42.881-42.876 42.884 42.876c11.845 11.822 31.064 11.846 42.886 0l128.64-128.64c11.816-11.831 11.816-31.066 0-42.9l-42.881-42.881c-11.822-11.814-31.064-11.814-42.887 0l-45.928 45.936c-21.292-12.531-45.491-17.905-69.449-16.291l72.501-72.526c35.535-35.521 93.136-35.521 128.64 0l42.886 42.881c35.535 35.523 35.535 93.141-.001 128.66zm-254.28 168.51-45.903 45.9c-11.845 11.846-31.064 11.817-42.881 0l-42.884-42.881c-11.845-11.821-11.845-31.041 0-42.886l128.65-128.65c11.819-11.814 31.069-11.814 42.884 0l42.886 42.886 42.876-42.886-42.876-42.881c-35.54-35.521-93.113-35.521-128.65 0l-128.65 128.64c-35.538 35.545-35.538 93.146 0 128.65l42.883 42.882c35.51 35.54 93.11 35.54 128.65 0l72.496-72.499c-23.956 1.597-48.092-3.784-69.474-16.283z"/>
-      </g>
-     </g>
-    </g>
-  </symbol>
-
-  <symbol id="doc" viewBox="0 0 35 45">
-   <g transform="translate(-147.53 -539.83)">
-    <path style="stroke:currentColor;stroke-width:2.4501;fill:none" d="m149.38 542.67v39.194h31.354v-39.194z"/>
-    <g style="stroke-width:25" transform="matrix(.098003 0 0 .098003 133.69 525.96)">
-     <path d="m220 252.36h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
-     <path style="stroke:currentColor;stroke-width:25;fill:none" d="m220 409.95h200"/>
-     <path d="m220 488.74h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
-     <path d="m220 331.15h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
-    </g>
-   </g>
- </symbol>
-
- <symbol id="tick" viewBox="0 0 177.16535 177.16535">
-  <g transform="translate(0 -875.2)">
-   <rect style="stroke-width:0;fill:currentColor" transform="rotate(30)" height="155" width="40" y="702.99" x="556.82"/>
-   <rect style="stroke-width:0;fill:currentColor" transform="rotate(30)" height="40" width="90.404" y="817.99" x="506.42"/>
-  </g>
- </symbol>
-</svg>
-
-    <div class="wrapper">
-      <header class="intro-and-nav" role="banner">
-  <div>
-    <div class="intro">
-      <a
-        class="logo"
-        href="https://alanoakes.dev"
-        aria-label="alanoakes.dev home page"
-      >
-        
-          <img 
-            src="/images/logo.svg" 
-            alt="Logo"
-          >
-        
-      </a>
-      <p class="library-desc">
-         Have a question or need some work done? Feel free to contact me! 
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Accepting new clients — local &amp; remote
+    </div>
+    <h1 class="hero-headline">
+      Your business,<br>
+      <span class="hl">found</span> on<br>
+      <span class="hl-gold">Google.</span>
+    </h1>
+    <div class="hero-sub-row">
+      <p class="hero-sub">
+        I build <strong>professional websites</strong> and run <strong>ongoing SEO</strong> for small businesses — so your customers find you before they find your competition.
       </p>
     </div>
-    <nav id="patterns-nav" class="patterns" role="navigation">
-  <h2 class="vh">Main navigation</h2>
-  <button id="menu-button" aria-expanded="false">
-    <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
-      <use href="#menu"></use>
-    </svg>
-    Menu
-  </button>
-  
-  <ul id="patterns-list">
-  
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/" aria-current="page">
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use href="#bookmark"></use>
-        </svg>
-        <span class="text">Home</span>
-      </a>
-    </li>
-  
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/post/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use href="#bookmark"></use>
-        </svg>
-        <span class="text">Log Blog</span>
-      </a>
-    </li>
-  
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/tags/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use href="#bookmark"></use>
-        </svg>
-        <span class="text">Tags</span>
-      </a>
-    </li>
-  
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/projects/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use href="#bookmark"></use>
-        </svg>
-        <span class="text">Projects</span>
-      </a>
-    </li>
-  
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/about/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use href="#bookmark"></use>
-        </svg>
-        <span class="text">About</span>
-      </a>
-    </li>
-  
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/index.xml" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use href="#bookmark"></use>
-        </svg>
-        <span class="text">RSS</span>
-      </a>
-    </li>
-  
-  </ul>
-</nav>
-    
-  </div>
-</header>
-
-      <div class="main-and-footer">
-        <div>
-          
-  <main id="main">
-    <h1>Home</h1>
-    <style>
-img.thumb {
-  width: 100%;
-  height: auto;
-  margin-top: 15px;
-}
-.content:hover {
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
-  border: 2px solid black;
-}
-
-.content {
-  height: auto;
-  width: 30%;
-  padding: 5px;
-  border: none;
-  border-radius: 2px;
-  margin: 5px 0px;
-  position: relative;
-}
-.content::before,
-.content::after {
-  --scale: 0;
-  position: absolute;
-  top: -0.25rem;
-  left: 50%;
-  transform: translateX(-50%) translateY(-100%) scale(var(--scale));
-  transform-origin: bottom center;
-  transition: 200ms transform;
-}
-
-.content::before {
-  content: attr(data-tooltip);
-  width: max-content;
-  max-width: 75%;
-  height: auto;
-  padding: 0.5rem;
-  border-radius: 2px;
-  border: 1px solid black;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
-  text-align: center;
-  font-size: 11px;
-  background: white;
-  color: black;
-}
-
-.content:hover::before {
-  --scale: 1;
-}
-a {
-  border-bottom: none !important;
-}
-.flex-container{
-    display:flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 20px;
-}
-h4#img-title {
-  padding-top: 5px !important;
-}
-</style>
-<div align="center">
-  <!---
-  <img alt="avatar" src="avatar_me.png" width="200" >
-  --->
-  <p>
-    Hi! I'm Parker and welcome to alanoakes.dev! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">
-    <br/><br/>
-    This is my personal site that serves as a reference point containing
-    information regarding freelancing, my past and current projects, Shopify Theme Development,
-    web applications, data mining/analysis, research and blogging.
-  </p>
-  <hr>
-  <p>
-    Click on the below links to go to access these projects, visit the "About" page to contact me, or use the menu to view local content.
-  </p>
-  <div class="flex-container">
-    <div class="content" data-tooltip="GitHub is a code hosting platform for version control and collaboration.">
-      <a href="https://github.com/alanoakes">
-      <h4 id="img-title">GitHub</h4>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="thumb" />
-      </a>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-green">Get a free quote →</a>
+      <a href="#services" class="btn btn-ghost">See what's included</a>
     </div>
-    <div class="content" data-tooltip="Shopify is a user-friendly e-commerce platform that helps small businesses build an online store and sell online through one streamlined dashboard.">
-      <a href="about:blank">
-      <h4 id="img-title">Shopify</h4>
-        <img src="shopify.svg" class="thumb" />
-      </a>
+    <div class="scroll-hint">
+      <span class="scroll-line"></span>
+      Scroll to explore
     </div>
-    <div class="content" data-tooltip="Rpubs is an open publishing platform for HTML documents produced using RMarkdown from within RStudio ...">
-      <a href="https://rpubs.com/alanoakes/">
-      <h4 id="img-title">RPubs</h4>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg" class="thumb" />
-      </a>
-    </div>
-    <div class="content" data-tooltip="... is considered a 'micro-task' site, where you can do relatively quick, small one-off tasks which they call 'gigs.'">
-      <a href="about:blank">
-      <h4 id="img-title">Fiverr</h4>
-        <img src="fiverr.svg" class="thumb" />
-      </a>
-    </div>
-    <div class="content" data-tooltip="Upwork is an online freelance marketplace. Clients come to the platform to look for freelance talent to work on their projects.">
-      <a href="about:blank">
-      <h4 id="img-title">Upwork</h4>
-        <img src="upwork.svg" class="thumb" />
-      </a>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div id="trust">
+    <span class="trust-label">What you get</span>
+    <div class="trust-divider"></div>
+    <div class="trust-items">
+      <span class="trust-item">Mobile-first design</span>
+      <span class="trust-item">Google-optimized from day one</span>
+      <span class="trust-item">Monthly SEO reporting</span>
+      <span class="trust-item">Fast turnaround</span>
+      <span class="trust-item">No long-term contracts</span>
     </div>
   </div>
-  </p>
-</div>
 
-  </main>
-
-          
-            <footer role="contentinfo">
-  <div
-  
-  >
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      
-      <span aria-hidden="true"></span>
-    </label>
-  </div>
-  
-    Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>. Deployed by <a href="https://pages.github.com/">Github Pages</a>.
-  
-</footer>
-
-          
-        </div>
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section">
+    <p class="section-eyebrow reveal">The process</p>
+    <h2 class="section-heading reveal">Simple as <em>1, 2, 3</em></h2>
+    <p class="section-body reveal">No jargon, no surprises. Here's exactly how we go from conversation to customers finding you online.</p>
+    <div class="how-grid reveal">
+      <div class="how-step">
+        <div class="step-num">01</div>
+        <h3 class="step-title">Free discovery call</h3>
+        <p class="step-desc">We talk about your business, your goals, and what your customers are actually searching for. No obligation.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">02</div>
+        <h3 class="step-title">Build your site</h3>
+        <p class="step-desc">I design and build a fast, mobile-friendly site that's structured to rank well from the moment it goes live.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">03</div>
+        <h3 class="step-title">SEO, month by month</h3>
+        <p class="step-desc">Ongoing keyword targeting, content updates, and ranking reports so you keep climbing and stay ahead of competitors.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">04</div>
+        <h3 class="step-title">You get found</h3>
+        <p class="step-desc">More visibility, more calls, more customers. That's the whole point — and we track it every step of the way.</p>
       </div>
     </div>
-    
+  </section>
 
-<script src="/js/dom-scripts.js"></script>  
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <p class="section-eyebrow reveal">Services &amp; bundles</p>
+    <h2 class="section-heading reveal">Everything a small business<br><em>actually needs</em></h2>
+    <p class="section-body reveal">Website design and SEO work best together. That's why I offer them as a bundle — and handle both so you don't have to juggle multiple vendors.</p>
 
-<script src="/js/prism.js"></script>
+    <div class="services-layout">
+      <div class="service-card featured reveal">
+        <div class="featured-inner">
+          <div>
+            <span class="service-badge bundle">⭐ Most Popular</span>
+            <h3 class="service-name">Website + SEO Bundle</h3>
+            <p class="service-desc">The complete package. A professionally designed website built for search engines from the ground up, plus monthly SEO to keep growing your rankings over time.</p>
+            <div class="service-cta">
+              <a href="#contact" class="btn btn-white">Get a free quote →</a>
+            </div>
+          </div>
+          <div>
+            <div class="service-includes">
+              <div class="include-item"><span class="include-check">✓</span>Custom website design (mobile-first)</div>
+              <div class="include-item"><span class="include-check">✓</span>On-page SEO &amp; technical setup</div>
+              <div class="include-item"><span class="include-check">✓</span>Google Business Profile optimization</div>
+              <div class="include-item"><span class="include-check">✓</span>Monthly keyword tracking &amp; reporting</div>
+              <div class="include-item"><span class="include-check">✓</span>Content updates &amp; blog management</div>
+              <div class="include-item"><span class="include-check">✓</span>Local SEO for your service area</div>
+              <div class="include-item"><span class="include-check">✓</span>Speed &amp; Core Web Vitals optimization</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="service-card reveal">
+        <span class="service-badge add-on">Website design</span>
+        <h3 class="service-name">New Website</h3>
+        <p class="service-desc">A clean, professional site built to load fast and look great on any device. Ideal if you have no online presence yet — or if your current site is hurting more than helping.</p>
+        <div class="service-includes">
+          <div class="include-item"><span class="include-check">✓</span>Custom design, not a template</div>
+          <div class="include-item"><span class="include-check">✓</span>Mobile responsive &amp; fast-loading</div>
+          <div class="include-item"><span class="include-check">✓</span>Contact forms &amp; calls-to-action</div>
+          <div class="include-item"><span class="include-check">✓</span>Basic on-page SEO included</div>
+        </div>
+        <div class="service-cta"><a href="#contact" class="btn btn-ghost">Let's talk →</a></div>
+      </div>
 
+      <div class="service-card reveal">
+        <span class="service-badge add-on">SEO service</span>
+        <h3 class="service-name">Monthly SEO</h3>
+        <p class="service-desc">Already have a site but not ranking? I'll audit what's holding you back and run a monthly SEO strategy to push you up the search results.</p>
+        <div class="service-includes">
+          <div class="include-item"><span class="include-check">✓</span>Full SEO audit &amp; competitor analysis</div>
+          <div class="include-item"><span class="include-check">✓</span>Keyword targeting &amp; content strategy</div>
+          <div class="include-item"><span class="include-check">✓</span>Google Search Console management</div>
+          <div class="include-item"><span class="include-check">✓</span>Monthly ranking reports</div>
+        </div>
+        <div class="service-cta"><a href="#contact" class="btn btn-ghost">Let's talk →</a></div>
+      </div>
+    </div>
+  </section>
 
-<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+  <!-- SEO DEEP DIVE -->
+  <section id="seo" class="section">
+    <p class="section-eyebrow reveal">Why SEO matters</p>
+    <h2 class="section-heading reveal">Your customers are<br><em>already searching</em></h2>
+    <p class="section-body reveal">93% of online experiences begin with a search engine. If you're not on the first page, you're invisible to most of them. SEO changes that — and the results compound over time.</p>
 
-<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+    <div class="seo-layout">
+      <div class="seo-points reveal">
+        <div class="seo-point">
+          <div class="seo-icon">📍</div>
+          <div>
+            <h4 class="seo-point-title">Local SEO — rank in your city</h4>
+            <p class="seo-point-desc">Show up in "near me" searches and Google Maps when customers in your area are ready to buy.</p>
+          </div>
+        </div>
+        <div class="seo-point">
+          <div class="seo-icon">🔑</div>
+          <div>
+            <h4 class="seo-point-title">Keyword targeting that converts</h4>
+            <p class="seo-point-desc">We target the words your actual customers type — intent-driven keywords that bring buyers, not browsers.</p>
+          </div>
+        </div>
+        <div class="seo-point">
+          <div class="seo-icon">📈</div>
+          <div>
+            <h4 class="seo-point-title">Transparent monthly reporting</h4>
+            <p class="seo-point-desc">A clear monthly report showing your rankings, traffic, and exactly what we're doing to keep improving.</p>
+          </div>
+        </div>
+        <div class="seo-point">
+          <div class="seo-icon">⚡</div>
+          <div>
+            <h4 class="seo-point-title">Technical SEO baked in</h4>
+            <p class="seo-point-desc">Page speed, Core Web Vitals, structured data, sitemaps — the under-the-hood work Google rewards.</p>
+          </div>
+        </div>
+      </div>
 
+      <div class="seo-visual reveal">
+        <p class="chart-label">// Sample keyword ranking progress</p>
+        <div class="chart-bars" id="chart-bars">
+          <div class="chart-row">
+            <span class="chart-keyword">"plumber Memphis TN"</span>
+            <div class="chart-bar-track"><div class="chart-bar-fill" data-width="0.92"></div></div>
+            <span class="chart-rank">#2</span>
+          </div>
+          <div class="chart-row">
+            <span class="chart-keyword">"roof repair near me"</span>
+            <div class="chart-bar-track"><div class="chart-bar-fill" data-width="0.78"></div></div>
+            <span class="chart-rank">#4</span>
+          </div>
+          <div class="chart-row">
+            <span class="chart-keyword">"best local bakery"</span>
+            <div class="chart-bar-track"><div class="chart-bar-fill" data-width="0.95"></div></div>
+            <span class="chart-rank">#1</span>
+          </div>
+          <div class="chart-row">
+            <span class="chart-keyword">"ac service [city]"</span>
+            <div class="chart-bar-track"><div class="chart-bar-fill" data-width="0.65"></div></div>
+            <span class="chart-rank">#6</span>
+          </div>
+          <div class="chart-row">
+            <span class="chart-keyword">"dog grooming open"</span>
+            <div class="chart-bar-track"><div class="chart-bar-fill" data-width="0.88"></div></div>
+            <span class="chart-rank">#2</span>
+          </div>
+        </div>
+        <p style="font-family:var(--mono);font-size:0.62rem;color:rgba(248,246,242,0.25);margin-top:1.75rem;letter-spacing:0.06em;">* Illustrative examples. Results vary by market &amp; competition.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- WHO I WORK WITH -->
+  <section id="who" class="section">
+    <p class="section-eyebrow reveal">Who I help</p>
+    <h2 class="section-heading reveal">Great for businesses like <em>yours</em></h2>
+    <p class="section-body reveal">I work with local and remote small businesses across all industries. If you serve customers, you need to be found.</p>
+    <div class="who-grid reveal">
+      <div class="who-card"><div class="who-icon">🔧</div><div class="who-name">Contractors &amp; Trades</div></div>
+      <div class="who-card"><div class="who-icon">🍽️</div><div class="who-name">Restaurants &amp; Cafés</div></div>
+      <div class="who-card"><div class="who-icon">💆</div><div class="who-name">Salons &amp; Spas</div></div>
+      <div class="who-card"><div class="who-icon">⚖️</div><div class="who-name">Law &amp; Accounting</div></div>
+      <div class="who-card"><div class="who-icon">🏠</div><div class="who-name">Real Estate &amp; Property</div></div>
+      <div class="who-card"><div class="who-icon">🐾</div><div class="who-name">Pet Services</div></div>
+      <div class="who-card"><div class="who-icon">🏋️</div><div class="who-name">Fitness &amp; Wellness</div></div>
+      <div class="who-card"><div class="who-icon">🛠️</div><div class="who-name">Any Small Business</div></div>
+    </div>
+  </section>
 
-  <script src="/js/highlight.min.js"></script>
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <p class="section-eyebrow reveal">FAQ</p>
+    <h2 class="section-heading reveal">Common <em>questions</em></h2>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How long does it take to build a website?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Most small business sites are designed and launched within 2–4 weeks, depending on how quickly we gather your content. I'll give you a specific timeline after our discovery call.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How long before SEO starts working?<span class="faq-icon">+</span></button>
+        <div class="faq-a">SEO is a long game — most businesses see meaningful movement in 3–6 months, with stronger results at 6–12 months. Unlike paid ads, the results keep compounding even after you stop actively investing.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do I need to sign a long contract?<span class="faq-icon">+</span></button>
+        <div class="faq-a">No long-term lock-in. Website builds are a one-time project. Monthly SEO is month-to-month — I earn your continued business by showing results, not by trapping you in a contract.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can you work with businesses outside Memphis?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Absolutely — I work with small businesses anywhere in the US. Everything is handled remotely via video calls, email, and shared project documents. Location is no barrier.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What do you need from me to get started?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Just a conversation. After that, I'll need your logo (if you have one), some photos, and your content preferences. I can help with copywriting and photography guidance — you don't need to have everything ready on day one.</div>
+      </div>
+    </div>
+  </section>
 
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="contact-headline reveal">Ready to get found?</h2>
+    <p class="contact-sub reveal">Tell me about your business and what you're looking for. I'll follow up within 24 hours with ideas and next steps — no pressure, no hard sell.</p>
+    <div class="contact-actions reveal">
+      <a href="mailto:hello@alanoakes.dev" class="btn btn-dark">Email me directly</a>
+      <a href="https://github.com/alanoakes" class="btn btn-clear" target="_blank" rel="noopener">View my work</a>
+    </div>
+    <p class="contact-email-display reveal">Or reach me at <a href="mailto:hello@alanoakes.dev">hello@alanoakes.dev</a></p>
+  </section>
 
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  <!-- FOOTER -->
+  <footer>
+    <a href="#" class="footer-logo">Parker<span>Oakes</span>.dev</a>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#seo">SEO</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/alanoakes" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <span class="footer-copy">© 2026 Parker Oakes · Memphis, TN</span>
+  </footer>
 
-    
-  
+  <script>
+    // Nav hide/show
+    let lastY = 0;
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      nav.style.transform = (y > lastY && y > 100) ? 'translateY(-100%)' : 'translateY(0)';
+      lastY = y;
+    }, { passive: true });
 
-  </body>
+    // Scroll reveal
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    // Stagger grid children
+    document.querySelectorAll('.who-grid .who-card, .how-grid .how-step').forEach((el, i) => {
+      el.style.transitionDelay = `${(i % 4) * 0.08}s`;
+    });
+
+    // Animate chart bars
+    const bars = document.querySelectorAll('.chart-bar-fill');
+    const chartObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          bars.forEach((bar, i) => {
+            setTimeout(() => { bar.style.transform = `scaleX(${bar.dataset.width})`; }, i * 120);
+          });
+          chartObs.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    chartObs.observe(document.getElementById('seo'));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
+  </script>
+
+</body>
 </html>
