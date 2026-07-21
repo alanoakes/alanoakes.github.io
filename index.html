@@ -329,6 +329,37 @@
     .who-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
     .who-name { font-size: 0.85rem; font-weight: 600; color: var(--ink); }
 
+    /* WORK */
+    #work { background: var(--white); }
+    .work-grid { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .work-card {
+      display: block;
+      background: var(--bg);
+      border: 1.5px solid var(--rule);
+      border-radius: 8px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s;
+    }
+    .work-card:hover { border-color: var(--green); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,122,74,0.1); }
+    .work-thumb {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .work-thumb img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .work-thumb.photo { padding: 0; }
+    .work-thumb.photo img { width: 100%; height: 100%; object-fit: cover; }
+    .work-info { padding: 1.5rem; border-top: 1px solid var(--rule); background: var(--white); }
+    .work-tag { display: inline-block; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 0.6rem; }
+    .work-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; color: var(--ink); margin-bottom: 0.5rem; }
+    .work-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
+    .work-link { margin-top: 0.9rem; font-size: 0.78rem; font-weight: 600; color: var(--green); display: flex; align-items: center; gap: 0.35rem; }
+    .work-card:hover .work-link { color: var(--ink); }
+
     /* FAQ */
     #faq { background: var(--white); }
     .faq-list { margin-top: 3.5rem; max-width: 680px; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
@@ -402,6 +433,7 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#seo">SEO</a></li>
         <li><a href="#who">Who I Help</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <a href="#contact" class="nav-cta">Get a Free Quote</a>
@@ -624,6 +656,50 @@
     </div>
   </section>
 
+  <!-- RECENT WORK -->
+  <section id="work" class="section">
+    <p class="section-eyebrow reveal">Recent work</p>
+    <h2 class="section-heading reveal">Real sites for <em>real businesses</em></h2>
+    <p class="section-body reveal">A few examples of websites I've designed and built for small businesses like yours.</p>
+    <div class="work-grid reveal">
+      <a class="work-card" href="https://lonestar-lawncare.com/" target="_blank" rel="noopener">
+        <div class="work-thumb">
+          <img src="https://lonestar-lawncare.com/docs/assets/images/LoneStarLS.svg" alt="Lone Star Lawn Care logo" loading="lazy">
+        </div>
+        <div class="work-info">
+          <span class="work-tag">Landscaping</span>
+          <h3 class="work-name">Lone Star Lawn Care</h3>
+          <p class="work-desc">A clean, mobile-friendly site for a family-owned lawn care company.</p>
+          <span class="work-link">Visit site →</span>
+        </div>
+      </a>
+
+      <a class="work-card" href="https://realsupporttc.com/" target="_blank" rel="noopener">
+        <div class="work-thumb">
+          <img src="https://realsupporttc.com/docs/assets/images/logo/RealSupportLogo_nobg.png" alt="Real Support Transaction Services logo" loading="lazy">
+        </div>
+        <div class="work-info">
+          <span class="work-tag">Real Estate Services</span>
+          <h3 class="work-name">Real Support Transaction Services</h3>
+          <p class="work-desc">A booking-friendly site for a real estate transaction coordinator.</p>
+          <span class="work-link">Visit site →</span>
+        </div>
+      </a>
+
+      <a class="work-card" href="https://www.3sonsconstructionco.com" target="_blank" rel="noopener">
+        <div class="work-thumb photo">
+          <img src="https://www.3sonsconstructionco.com/docs/assets/images/3sons_index_roofing.jpg" alt="3 Sons Construction roofing project" loading="lazy">
+        </div>
+        <div class="work-info">
+          <span class="work-tag">Construction &amp; Roofing</span>
+          <h3 class="work-name">3 Sons Construction</h3>
+          <p class="work-desc">A multi-page site for a Memphis roofing, painting, gutters &amp; siding company.</p>
+          <span class="work-link">Visit site →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section id="faq" class="section">
     <p class="section-eyebrow reveal">FAQ</p>
@@ -657,10 +733,10 @@
     <h2 class="contact-headline reveal">Ready to get found?</h2>
     <p class="contact-sub reveal">Tell me about your business and what you're looking for. I'll follow up within 24 hours with ideas and next steps — no pressure, no hard sell.</p>
     <div class="contact-actions reveal">
-      <a href="mailto:oakespar@gmail.com" class="btn btn-dark">Email me directly</a>
-      <a href="https://github.com/alanoakes" class="btn btn-clear" target="_blank" rel="noopener">View my work</a>
+      <a href="mailto:hello@alanoakes.dev" class="btn btn-dark">Email me directly</a>
+      <a href="#work" class="btn btn-clear">See my work</a>
     </div>
-    <p class="contact-email-display reveal">Or reach me at <a href="mailto:oakespar@gmail.com">oakespar@gmail.com</a></p>
+    <p class="contact-email-display reveal">Or reach me at <a href="mailto:hello@alanoakes.dev">hello@alanoakes.dev</a></p>
   </section>
 
   <!-- FOOTER -->
@@ -669,9 +745,9 @@
     <div class="footer-links">
       <a href="#services">Services</a>
       <a href="#seo">SEO</a>
+      <a href="#work">Work</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
-      <a href="https://github.com/alanoakes" target="_blank" rel="noopener">GitHub</a>
     </div>
     <span class="footer-copy">© 2026 AlanOakes.dev · Memphis, TN</span>
   </footer>
@@ -695,7 +771,7 @@
     document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
     // Stagger grid children
-    document.querySelectorAll('.who-grid .who-card, .how-grid .how-step').forEach((el, i) => {
+    document.querySelectorAll('.who-grid .who-card, .how-grid .how-step, .work-grid .work-card').forEach((el, i) => {
       el.style.transitionDelay = `${(i % 4) * 0.08}s`;
     });
 
