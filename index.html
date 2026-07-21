@@ -15,7 +15,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Epilogue:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,9 +31,9 @@
       --rule:     #e0ddd7;
       --white:    #ffffff;
 
-      --serif: 'Playfair Display', Georgia, serif;
-      --body:  'Epilogue', sans-serif;
-      --mono:  'JetBrains Mono', monospace;
+      --serif: 'IBM Plex Serif', Georgia, serif;
+      --body:  'IBM Plex Sans', sans-serif;
+      --mono:  'IBM Plex Mono', monospace;
     }
 
     html { scroll-behavior: smooth; }
@@ -160,7 +160,7 @@
     .hero-headline {
       font-family: var(--serif);
       font-size: clamp(2.8rem, 7vw, 6.5rem);
-      font-weight: 900;
+      font-weight: 700;
       line-height: 1.0;
       letter-spacing: -0.02em;
       color: var(--ink);
@@ -259,7 +259,7 @@
     .how-step { padding: 2.5rem 2rem; border-right: 1px solid var(--rule); transition: background 0.25s; }
     .how-step:last-child { border-right: none; }
     .how-step:hover { background: var(--green-lt); }
-    .step-num { font-family: var(--serif); font-size: 3.5rem; font-weight: 900; color: var(--green-md); line-height: 1; margin-bottom: 1rem; transition: color 0.25s; }
+    .step-num { font-family: var(--serif); font-size: 3.5rem; font-weight: 700; color: var(--green-md); line-height: 1; margin-bottom: 1rem; transition: color 0.25s; }
     .how-step:hover .step-num { color: var(--green); }
     .step-title { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 0.6rem; }
     .step-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
@@ -344,7 +344,7 @@
     /* CONTACT */
     #contact { background: var(--green); padding: 7rem 3rem; text-align: center; position: relative; overflow: hidden; }
     #contact::before { content: ''; position: absolute; bottom: -20%; right: -10%; width: 50vw; height: 50vw; border-radius: 50%; background: rgba(0,0,0,0.08); pointer-events: none; }
-    .contact-headline { font-family: var(--serif); font-size: clamp(2rem, 5vw, 4rem); font-weight: 900; color: var(--white); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1rem; position: relative; z-index: 1; }
+    .contact-headline { font-family: var(--serif); font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1rem; position: relative; z-index: 1; }
     .contact-sub { font-size: 1rem; color: rgba(255,255,255,0.75); max-width: 44ch; margin: 0 auto 2.5rem; line-height: 1.75; font-weight: 300; position: relative; z-index: 1; }
     .contact-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; position: relative; z-index: 1; }
     .contact-email-display { margin-top: 2rem; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.06em; color: rgba(255,255,255,0.6); position: relative; z-index: 1; }
